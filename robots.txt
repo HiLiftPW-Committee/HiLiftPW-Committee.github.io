@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://HiLiftPW-Committee.github.io/redesign.github.io/sitemap.xml
+Sitemap: https://HiLiftPW-Committee.github.io/redesign//sitemap.xml
