@@ -58,19 +58,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/redesign/people/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
+        },{id: "dropdown-hlpw5",
+              title: "HLPW5",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/books/";
+                window.location.href = "/redesign/hlpw5/";
               },
-            },{id: "dropdown-blog",
-              title: "blog",
+            },{id: "dropdown-hlpw4",
+              title: "HLPW4",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/blog/";
+                window.location.href = "/redesign/hlpw4/";
+              },
+            },{id: "dropdown-hlpw3",
+              title: "HLPW3",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/hlpw3/";
+              },
+            },{id: "dropdown-hlpw2",
+              title: "HLPW2",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/hlpw2/";
+              },
+            },{id: "dropdown-hlpw1",
+              title: "HLPW1",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/hlpw1/";
               },
             },{id: "post-a-post-with-plotly-js",
         
