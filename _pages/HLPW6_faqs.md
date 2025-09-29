@@ -19,7 +19,6 @@ A Technology Focus Group (TFG) is made up of ACTIVE PARTICIPANTS working (remote
 #### How can I attend the workshop if I am not presenting my own work in an individual presentation?
 It is hoped that organizations will still encourage their employees to attend the workshop in order to see all of the TFG summaries, and to actively participate in the workshop discussions.
 
- 
 #### Do I have to join a TFG to attend HLPW-5?
 No. If you are not a member of a TFG, then your status is OBSERVER. Observers are free to run the test cases, use the grids, etc. But their results will not be included in the collective summaries presented at the workshop. Observers can also do nothing - just observe, because they are interested. Like everyone else, observers can attend the TFG meetings and/or the HLPW-5 workshop and join in the discussions there. In other words: Anyone, including active participants and observers, may attend HLPW-5 (subject to possible space availability/restrictions).
  
@@ -27,11 +26,13 @@ No. If you are not a member of a TFG, then your status is OBSERVER. Observers ar
 To attend the workshop, both active participants and observers must register for HLPW-5 with AIAA. AIAA will also give details regarding travel and accomodations, visas, etc. Note that registering for the AIAA Aviation conference alone does not give you access to HLPW-5 (and vice versa). You must specifically register for HLPW-5, and pay its additional registration fee.
  
 #### What happened at the first four high-lift prediction workshops?
-The first HiLift workshop took place in June 2010. See Webpage for HiLiftPW-1 for detailed information. The second HiLift workshop took place in June 2013. See Webpage for HiLiftPW-2 for detailed information. The third HiLift workshop took place in June 2017. See Webpage for HiLiftPW-3 for detailed information. The fourth HiLift workshop took place in January 2022. See Webpage for HLPW-4 for detailed information.
+Lots! The websites containing much of the data and conclusions are still available following the dropdowns above. Additionally, please see the publications page for summaries from the workshop committee and focus groups.
+- HLPW 1: June 2010
+- HLPW 2: June 2013
+- HLPW 3: June 2017
+- HLPW 4: January 2022
+- HLPW 5: July 2024
 
-#### By what date will CFD results need to be completed?
-For HLPW-5, there are 3 test cases that are being tackled by the TFGs sequentially, and several virtual meetings will likely be held prior to the final workshop in order to discuss the results and progress. Tentative dates are listed on the home page (HLPW-5 home page). Each TFG will likely define its own internal deadlines as well. Participants should also have an opportunity to refine their computations prior to the final deadline for HLPW-5.
- 
 #### What should I do if I find "problem areas" in the geometry files?
 If you encounter any problems/issues as you build grids using the geometry files, please make your own fixes, DOCUMENT everything done, and plan to share your fixes with your TFG. Note that the geometry includes regions that may be very difficult to grid (and possibly solve), including very thin gaps at the bottom/inside edge of the slats. These were present in the wind tunnel configuration, so they were left in. It is up to you how to handle such areas; this is part of the challenge of the workshop. Again, be sure to document every assumption/change/fix that you make, as your grids are created.
 
@@ -39,11 +40,13 @@ If you encounter any problems/issues as you build grids using the geometry files
 It is particularly important that you set conditions to match the prescribed Reynolds number (Re) and Mach number of the test cases. These two parameters uniquely define the flow conditions. If your CFD code does not take Re as an input, then (preferably) kinematic viscosity should be adjusted in order to achieve the precise Re requested in the Test Cases Document. The Re in the three HLPW-5 test cases vary (they are all based on mean aerodynamic chord (MAC)). The MAC is 275.8 inches (full scale). As a specific example, say that you want to run ReMAC=5,600,000 on a grid created in full-scale inches. In this case, the Re per inch should come out to ReMAC/275.8 = 20,304.5685.
  
 #### Where can I find gridding guidelines for making my own meshes?
-We have decided to forgo specific recommendations for meshing in HLPW-5. The reason for this is that the workshop includes many different methodologies, each of which has very different meshing requirements. Therefore, each TFG is taking the responsibility for determining its own "best practices" for creating meshes and families of meshes. For those participants performing fixed-grid RANS, the meshing guidelines from past workshops can provide some guidance if needed. See: https://hiliftpw.larc.nasa.gov/Workshop3/GriddingGuidelines-HiLiftPW3-v10.pdf and https://hiliftpw.larc.nasa.gov/Workshop4/Mesh-Generation-Guidelines-V11-3-Final.pdf.
+We have decided to forgo specific recommendations for meshing in HLPW-5. The reason for this is that the workshop includes many different methodologies, each of which has very different meshing requirements. Therefore, each TFG is taking the responsibility for determining its own "best practices" for creating meshes and families of meshes. For those participants performing fixed-grid RANS, the meshing guidelines from past workshops can provide some guidance if needed. 
+*[HLPW-3 Gridding Recommendations](GriddingGuidelines-HiLiftPW3-v10.pdf)*
+*[HLPW-4 Gridding Recommendations](Mesh-Generation-Guidelines-V11-3-Final.pdf)*
  
 #### Please describe how to obtain lift coefficient (CL), drag coefficient (CD), and pitching moment coefficient (CMy).
 Lift coefficient is defined as L/(qS), where L is the sum of the components of the pressure forces and viscous forces on all parts of the vehicle in the UP direction, taking into account the angle-of-attack. S is the reference area of the semi-span model (Sref/2). The q=dynamic pressure=0.5*rho_inf*U_inf2. Similarly, drag coefficient is defined as D/(qS), where D is the sum of the components of the pressure forces and viscous forces on all parts of the vehicle in the DOWNSTREAM direction, taking into account the angle-of-attack. Moment coefficient is defined as M/(qSc). Here, M is the moment about the moment reference center (MRC), and c is the mean aerodynamic chord (MAC). This workshop is asking for pitching moment coefficient, which is taken about the y-axis pointing out of the MRC. To get M, you need to sum up all of the local forces (pressure forces and viscous forces) times their moment arm about the MRC's y-axis. By convention, CMy is positive when it acts to pitch the aircraft nose UP. When computing the model in the wind tunnel, the model's standoff should not contribute to the computation of CL, CD, or CMy. The MAC, reference area (Sref/2), and MRC location are provided on the Geometry Files page. Note that the MRC is with respect to the particular coordinate system in which the geometry is provided (full-scale, in inches, with origin in front of and below the model nose). Y=0 is on the model's centerplane.
-CRM-HL moment reference center
+ <img src="/assets/img/moment_ref_center.png" alt="CRM-HL Moment Reference Center" style="height: 350px; border:1px solid black;">
  
 #### What is a PID and how do I use it?
 A PID is a Participant IDentification designation. It is the way we identify the submitted data for the workshop. PIDs will be assigned to each participant and/or team.
