@@ -11,4 +11,6 @@ children:
     permalink: /HLPW6/TFG
   - title: Test Cases
     permalink: /HLPW6/cases
+  - title: FAQs
+    permalink: /HLPW6/faq
 ---
