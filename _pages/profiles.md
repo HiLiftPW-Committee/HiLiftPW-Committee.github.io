@@ -1,28 +1,31 @@
 ---
-layout: profiles
-permalink: /people/
-title: people
-description: members of the lab or group
+layout: page
+permalink: /committee/
+title: Committee
+description: Members of the organizing committee
 nav: true
 nav_order: 7
 
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
----
+## Workshop Organizers
+
+Adam Clark
+adam.m.clark@boeing.com
+
+Li Wang
+li.wang@nasa.gov
+
+## Technical Focus Group Leads
+Boris Diskin (RANS)
+boris.diskin@nasa.gov
+
+Mike Park (RANS)
+mikepark.rb@gmail.com
+
+Konrad Goc (Scale Resolving)
+konrad.a.goc@boeing.com
+
+Marshall Galbraith (High-Order)
+galbramc@mit.edu
+
+Neil Ashton (AI/ML)
+nashton@nvidia.com
