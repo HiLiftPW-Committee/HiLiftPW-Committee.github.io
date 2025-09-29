@@ -241,17 +241,6 @@ ninja.data = [{
             window.location.href = "/redesign/blog/2023/audios/";
           
         },
-      },{id: "post-displaying-beautiful-tables-with-bootstrap-tables",
-        
-          title: "displaying beautiful tables with Bootstrap Tables",
-        
-        description: "an example of how to use Bootstrap Tables",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/redesign/blog/2023/tables/";
-          
-        },
       },{id: "post-a-post-with-table-of-contents",
         
           title: "a post with table of contents",
