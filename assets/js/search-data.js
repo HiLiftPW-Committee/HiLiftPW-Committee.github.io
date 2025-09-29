@@ -21,7 +21,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/hlpw5/";
+                window.location.href = "/redesign/HLPW5/index.html";
               },
             },{id: "dropdown-hlpw4",
               title: "HLPW4",
