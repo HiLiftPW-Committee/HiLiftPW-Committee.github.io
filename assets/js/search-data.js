@@ -21,35 +21,35 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/HLPW5/index.html";
+                window.location.href = "/redesign/HLPW5/";
               },
             },{id: "dropdown-hlpw4",
               title: "HLPW4",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/hlpw4/";
+                window.location.href = "/redesign/HLPW4/";
               },
             },{id: "dropdown-hlpw3",
               title: "HLPW3",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/hlpw3/";
+                window.location.href = "/redesign/HLPW3/";
               },
             },{id: "dropdown-hlpw2",
               title: "HLPW2",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/hlpw2/";
+                window.location.href = "/redesign/HLPW2/";
               },
             },{id: "dropdown-hlpw1",
               title: "HLPW1",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/redesign/hlpw1/";
+                window.location.href = "/redesign/HLPW1/";
               },
             },{id: "nav-committee",
           title: "Committee",
