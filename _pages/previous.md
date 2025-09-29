@@ -6,13 +6,13 @@ nav_order: 2
 dropdown: true
 children:
   - title: HLPW5
-    permalink: /HLPW5/index.html
+    permalink: /HLPW5/
   - title: HLPW4
-    permalink: /hlpw4/
+    permalink: /HLPW4/
   - title: HLPW3
-    permalink: /hlpw3/
+    permalink: /HLPW3/
   - title: HLPW2
-    permalink: /hlpw2/
+    permalink: /HLPW2/
   - title: HLPW1
-    permalink: /hlpw1/
+    permalink: /HLPW1/
 ---
