@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /hlpw6/
-title: HLPW6
+permalink: /HLPW6/about
+title: HLPW6 Overview
 nav: false
 ---
 
