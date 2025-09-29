@@ -9,14 +9,28 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/redesign/";
     },
-  },{id: "nav-hlpw6",
-          title: "HLPW6",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/redesign/hlpw6/";
-          },
-        },{id: "dropdown-hlpw5",
+  },{id: "dropdown-overview",
+              title: "Overview",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/HLPW6/about";
+              },
+            },{id: "dropdown-tfgs",
+              title: "TFGs",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/HLPW6/TFG";
+              },
+            },{id: "dropdown-test-cases",
+              title: "Test Cases",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/redesign/HLPW6/cases";
+              },
+            },{id: "dropdown-hlpw5",
               title: "HLPW5",
               description: "",
               section: "Dropdown",
