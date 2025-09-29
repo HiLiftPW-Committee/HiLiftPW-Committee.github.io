@@ -5,7 +5,7 @@ title: Committee
 description: Members of the organizing committee
 nav: true
 nav_order: 3
-
+---
 ## Workshop Organizers
 
 Adam Clark
