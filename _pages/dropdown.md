@@ -2,7 +2,7 @@
 layout: page
 title: Previous Workshops
 nav: true
-nav_order: 8
+nav_order: 2
 dropdown: true
 children:
   - title: HLPW5
