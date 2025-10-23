@@ -19,7 +19,7 @@ Boris Diskin (RANS)
 boris.diskin@nasa.gov
 
 Mike Park (RANS)
-mikepark.rb@gmail.com
+mike@flexcompute.com
 
 Konrad Goc (Scale Resolving)
 konrad.a.goc@boeing.com
