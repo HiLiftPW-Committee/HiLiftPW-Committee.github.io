@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "HiLiftPW-Committee/hiliftpw-committee.github.io",
+    "data-repo": "HiLiftPW-Committee/HiLiftPW-Committee.github.io",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
