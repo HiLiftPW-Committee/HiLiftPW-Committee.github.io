@@ -15,4 +15,6 @@ children:
     permalink: /HLPW2/
   - title: HLPW1
     permalink: /HLPW1/
+  - title: Meshing Guidelines
+    permalink: /meshing/
 ---
