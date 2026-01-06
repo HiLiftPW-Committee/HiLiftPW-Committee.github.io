@@ -1,0 +1,251 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Pacific Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN="Wang, Li (LARC-D302)";RSVP=TRUE:mailto:li.wang@nasa.gov
+ATTENDEE;CN="Diskin, Boris";RSVP=TRUE:mailto:boris.diskin@nasa.gov
+ATTENDEE;CN=mike@flexcompute.com;RSVP=TRUE:mailto:mike@flexcompute.com
+ATTENDEE;CN="Goc (US), Konrad A";RSVP=TRUE:mailto:konrad.a.goc@boeing.com
+ATTENDEE;CN="Marshall C Galbraith";RSVP=TRUE:mailto:galbramc@mit.edu
+ATTENDEE;CN="Neil Ashton";RSVP=TRUE:mailto:nashton@nvidia.com
+CLASS:PUBLIC
+CREATED:20260106T184953Z
+DESCRIPTION:Dear All\,\n\nThis meeting will serve as the official launch of
+	 the 6th AIAA High Lift Prediction Workshop. We’ll introduce our Technic
+	al Focus Groups and Leaders\, touch on some of the unanswered questions fr
+	om the previous workshops\, and share the test cases we’ll be working on
+	. The workshop is scheduled to take place at AIAA Aviation in June 2027\, 
+	but work within the focus groups will start in the very near term. This wi
+	ll give us around 18 months to work in the focus groups towards answering 
+	key questions.\n\n \n\nWe’ve also launched a new website at: https://aia
+	a-hlpw.org/  -- More information will be populated there when it becomes a
+	vailable. The presentation from this kickoff will be posted here\, if you
+	’re unable to join in real time.\n\n \n\nPlease feel free to forward thi
+	s invitation to others that may not have been on the distribution list\, o
+	r reach out with any other questions or concerns\n\n \n\nWe look forward t
+	o your participation!\n\nAdam Clark & Li Wang\n\n_________________________
+	_______________________________________________________\n\nMicrosoft Teams
+	 Need help? <https://aka.ms/JoinTeamsMeeting?omkt=en-US>  \n\nJoin the mee
+	ting now <https://gov.teams.microsoft.us/l/meetup-join/19%3agcch%3ameeting
+	_e928084201904902b18c4edc26592a9d%40thread.v2/0?context=%7b%22Tid%22%3a%22
+	bcf48bba-4d6f-4dee-a0d2-7df59cc36629%22%2c%22Oid%22%3a%22baa51ec4-8028-44d
+	c-8e74-e4532a7164bd%22%7d>  \n\nMeeting ID: 992 798 235 537 \n\nPasscode: 
+	CK9Jp3tN \n\n________________________________\n\nDial in by phone \n\n+1 2
+	06-655-7000\,\,635009239# <tel:+12066557000\,\,635009239>  United States\,
+	 Seattle \n\n(888) 359-8755\,\,635009239# <tel:8883598755\,\,635009239>  (
+	Toll-free) \n\nFind a local number <https://dialin.cpc.gov.teams.microsoft
+	.us/109f9590-3343-471c-a60d-cff7b148466c?id=635009239>  \n\nPhone conferen
+	ce ID: 635 009 239# \n\nJoin on a video conferencing device \n\nTenant key
+	: teams@pexip.boeing.com <mailto:teams@pexip.boeing.com>  \n\nVideo ID: 51
+	4 409 714 2 \n\nMore info <https://pexpedge01.pexip.boeing.com/teams/?conf
+	=5144097142&ivr=teams&d=pexip.boeing.com&ip=20.158.224.248&test=test_call&
+	w>  \n\nFor organizers: Meeting options <https://gov.teams.microsoft.us/me
+	etingOptions/?organizerId=baa51ec4-8028-44dc-8e74-e4532a7164bd&tenantId=bc
+	f48bba-4d6f-4dee-a0d2-7df59cc36629&threadId=19_gcch_meeting_e9280842019049
+	02b18c4edc26592a9d@thread.v2&messageId=0&language=en-US>  | Reset dial-in 
+	PIN <https://dialin.cpc.gov.teams.microsoft.us/usp>  \n\n <https://www.boe
+	ing.com/content/theboeingcompany/us/en/company/key-orgs/brand/_jcr_content
+	/root/container/container_1690781466/image.coreimg.85.1600.jpeg/1702305421
+	285/boeing-logo-300x119.jpeg> \n\n________________________________________
+	________________________________________\n\n \n\n
+DTEND;TZID="Pacific Standard Time":20260120T080000
+DTSTAMP:20260106T180515Z
+DTSTART;TZID="Pacific Standard Time":20260120T070000
+LAST-MODIFIED:20260106T184953Z
+LOCATION:Microsoft Teams Meeting
+ORGANIZER;CN="Clark (US), Adam M":mailto:adam.m.clark@boeing.com
+PRIORITY:5
+SEQUENCE:1
+SUMMARY;LANGUAGE=en-us:AIAA High Lift Prediction Workshop 6
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E0080000000090BAB976EB7EDC01000000000000000
+	01000000048AC857129988444937D6CE8C425B4B2
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta name=Generato
+	r content="Microsoft Word 15 (filtered medium)"><!--[if !mso]><style>v\\:*
+	 {behavior:url(#default#VML)\;}\no\\:* {behavior:url(#default#VML)\;}\nw\\
+	:* {behavior:url(#default#VML)\;}\n.shape {behavior:url(#default#VML)\;}\n
+	</style><![endif]--><style><!--\n/* Font Definitions */\n@font-face\n	{fon
+	t-family:"Cambria Math"\;\n	panose-1:2 4 5 3 5 4 6 3 2 4\;}\n@font-face\n	
+	{font-family:"Calibri Light"\;\n	panose-1:2 15 3 2 2 2 4 3 2 4\;}\n@font-f
+	ace\n	{font-family:Aptos\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	pano
+	se-1:2 11 5 2 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNormal\, li.Ms
+	oNormal\, div.MsoNormal\n	{margin:0in\;\n	font-size:12.0pt\;\n	font-family
+	:"Aptos"\,sans-serif\;\n	mso-ligatures:standardcontextual\;}\na:link\, spa
+	n.MsoHyperlink\n	{mso-style-priority:99\;\n	color:#467886\;\n	text-decorat
+	ion:underline\;}\nspan.EmailStyle18\n	{mso-style-type:personal-compose\;\n
+		font-family:"Calibri Light"\,sans-serif\;\n	color:windowtext\;\n	font-wei
+	ght:normal\;\n	font-style:normal\;\n	text-decoration:none none\;}\nspan.me
+	-email-text\n	{mso-style-name:me-email-text\;}\nspan.me-email-text-seconda
+	ry\n	{mso-style-name:me-email-text-secondary\;}\nspan.me-email-headline\n	
+	{mso-style-name:me-email-headline\;}\n.MsoChpDefault\n	{mso-style-type:exp
+	ort-only\;\n	font-size:10.0pt\;\n	mso-ligatures:none\;}\n@page WordSection
+	1\n	{size:8.5in 11.0in\;\n	margin:1.0in 1.0in 1.0in 1.0in\;}\ndiv.WordSect
+	ion1\n	{page:WordSection1\;}\n--></style></head><body lang=EN-US link="#46
+	7886" vlink="#96607D" style='word-wrap:break-word'><div class=WordSection1
+	><p class=MsoNormal><span style='font-size:11.0pt\;font-family:"Calibri Li
+	ght"\,sans-serif'>Dear All\,<o:p></o:p></span></p><p class=MsoNormal><span
+	 style='font-size:11.0pt\;font-family:"Calibri Light"\,sans-serif'>This me
+	eting will serve as the official launch of the 6<sup>th</sup> AIAA High Li
+	ft Prediction Workshop. We&#8217\;ll introduce our Technical Focus Groups 
+	and Leaders\, touch on some of the unanswered questions from the previous 
+	workshops\, and share the test cases we&#8217\;ll be working on. The works
+	hop is scheduled to take place at AIAA Aviation in June 2027\, but work wi
+	thin the focus groups will start in the very near term. This will give us 
+	around 18 months to work in the focus groups towards answering key questio
+	ns.<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt\
+	;font-family:"Calibri Light"\,sans-serif'><o:p>&nbsp\;</o:p></span></p><p 
+	class=MsoNormal><span style='font-size:11.0pt\;font-family:"Calibri Light"
+	\,sans-serif'>We&#8217\;ve also launched a new website at: <a href="https:
+	//aiaa-hlpw.org/">https://aiaa-hlpw.org/</a> &nbsp\;-- More information wi
+	ll be populated there when it becomes available. The presentation from thi
+	s kickoff will be posted here\, if you&#8217\;re unable to join in real ti
+	me.<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt\
+	;font-family:"Calibri Light"\,sans-serif'><o:p>&nbsp\;</o:p></span></p><p 
+	class=MsoNormal><span style='font-size:11.0pt\;font-family:"Calibri Light"
+	\,sans-serif'>Please feel free to forward this invitation to others that m
+	ay not have been on the distribution list\, or reach out with any other qu
+	estions or concerns<o:p></o:p></span></p><p class=MsoNormal><span style='f
+	ont-size:11.0pt\;font-family:"Calibri Light"\,sans-serif'><o:p>&nbsp\;</o:
+	p></span></p><p class=MsoNormal><span style='font-size:11.0pt\;font-family
+	:"Calibri Light"\,sans-serif'>We look forward to your participation!<o:p><
+	/o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt\;font-fam
+	ily:"Calibri Light"\,sans-serif'>Adam Clark &amp\; Li Wang<o:p></o:p></spa
+	n></p><div><div style='margin-bottom:.25in\;overflow:hidden'><p class=MsoN
+	ormal><span style='font-family:"Segoe UI"\,sans-serif\;color:#242424'>____
+	__________________________________________________________________________
+	__</span><span style='font-family:"Segoe UI"\,sans-serif\;color:#242424\;m
+	so-ligatures:none'><o:p></o:p></span></p></div><div style='margin-bottom:9
+	.0pt'><p class=MsoNormal><span class=me-email-text><b><span style='font-si
+	ze:18.0pt\;font-family:"Segoe UI"\,sans-serif\;color:#242424'>Microsoft Te
+	ams</span></b></span><span style='font-family:"Segoe UI"\,sans-serif\;colo
+	r:#242424'> <a href="https://aka.ms/JoinTeamsMeeting?omkt=en-US"><span sty
+	le='font-size:10.5pt\;color:#5B5FC7'>Need help?</span></a> <o:p></o:p></sp
+	an></p></div><div style='margin-bottom:4.5pt'><p class=MsoNormal><span sty
+	le='font-family:"Segoe UI"\,sans-serif\;color:#242424'><a href="https://go
+	v.teams.microsoft.us/l/meetup-join/19%3agcch%3ameeting_e928084201904902b18
+	c4edc26592a9d%40thread.v2/0?context=%7b%22Tid%22%3a%22bcf48bba-4d6f-4dee-a
+	0d2-7df59cc36629%22%2c%22Oid%22%3a%22baa51ec4-8028-44dc-8e74-e4532a7164bd%
+	22%7d" target="_blank" title="Meeting join link"><b><span style='font-size
+	:15.0pt\;color:#5B5FC7'>Join the meeting now</span></b></a> <o:p></o:p></s
+	pan></p></div><div style='margin-bottom:4.5pt'><p class=MsoNormal><span cl
+	ass=me-email-text-secondary><span style='font-size:10.5pt\;font-family:"Se
+	goe UI"\,sans-serif\;color:#616161'>Meeting ID: </span></span><span class=
+	me-email-text><span style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-
+	serif\;color:#242424'>992 798 235 537</span></span><span style='font-famil
+	y:"Segoe UI"\,sans-serif\;color:#242424'> <o:p></o:p></span></p></div><div
+	 style='margin-bottom:24.0pt'><p class=MsoNormal><span class=me-email-text
+	-secondary><span style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-ser
+	if\;color:#616161'>Passcode: </span></span><span class=me-email-text><span
+	 style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#24242
+	4'>CK9Jp3tN</span></span><span style='font-family:"Segoe UI"\,sans-serif\;
+	color:#242424'> <o:p></o:p></span></p></div><div style='margin-bottom:9.0p
+	t'><div class=MsoNormal align=center style='text-align:center'><span style
+	='font-family:"Segoe UI"\,sans-serif\;color:#242424'><hr size=1 width="100
+	%" align=center></span></div></div><div><div style='margin-bottom:4.5pt'><
+	p class=MsoNormal><span class=me-email-text><b><span style='font-family:"S
+	egoe UI"\,sans-serif\;color:#242424'>Dial in by phone</span></b></span><sp
+	an style='font-family:"Segoe UI"\,sans-serif\;color:#242424'> <o:p></o:p><
+	/span></p></div><div style='margin-bottom:4.5pt'><p class=MsoNormal><span 
+	style='font-family:"Segoe UI"\,sans-serif\;color:#242424'><a href="tel:+12
+	066557000\,\,635009239"><span style='font-size:10.5pt\;color:#5B5FC7'>+1 2
+	06-655-7000\,\,635009239#</span></a> </span><span class=me-email-text><spa
+	n style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#6161
+	61'>United States\, Seattle</span></span><span style='font-family:"Segoe U
+	I"\,sans-serif\;color:#242424'> <o:p></o:p></span></p></div><div style='ma
+	rgin-bottom:4.5pt'><p class=MsoNormal><span style='font-family:"Segoe UI"\
+	,sans-serif\;color:#242424'><a href="tel:8883598755\,\,635009239"><span st
+	yle='font-size:10.5pt\;color:#5B5FC7'>(888) 359-8755\,\,635009239#</span><
+	/a> </span><span class=me-email-text><span style='font-size:10.5pt\;font-f
+	amily:"Segoe UI"\,sans-serif\;color:#616161'>(Toll-free)</span></span><spa
+	n style='font-family:"Segoe UI"\,sans-serif\;color:#242424'> <o:p></o:p></
+	span></p></div><div style='margin-bottom:4.5pt'><p class=MsoNormal><span s
+	tyle='font-family:"Segoe UI"\,sans-serif\;color:#242424'><a href="https://
+	dialin.cpc.gov.teams.microsoft.us/109f9590-3343-471c-a60d-cff7b148466c?id=
+	635009239"><span style='font-size:10.5pt\;color:#5B5FC7'>Find a local numb
+	er</span></a> <o:p></o:p></span></p></div></div><div style='margin-bottom:
+	.25in'><p class=MsoNormal><span class=me-email-text-secondary><span style=
+	'font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#616161'>Phon
+	e conference ID: </span></span><span class=me-email-text><span style='font
+	-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#242424'>635 009 2
+	39#</span></span><span style='font-family:"Segoe UI"\,sans-serif\;color:#2
+	42424'> <o:p></o:p></span></p></div><div style='margin-bottom:4.5pt'><p cl
+	ass=MsoNormal><span class=me-email-headline><b><span style='font-family:"S
+	egoe UI"\,sans-serif\;color:#242424'>Join on a video conferencing device</
+	span></b></span><span style='font-family:"Segoe UI"\,sans-serif\;color:#24
+	2424'> <o:p></o:p></span></p></div><div style='margin-bottom:4.5pt'><p cla
+	ss=MsoNormal><span class=me-email-text><span style='font-size:10.5pt\;font
+	-family:"Segoe UI"\,sans-serif\;color:#616161'>Tenant key: </span></span><
+	span class=me-email-text><span style='font-size:10.5pt\;font-family:"Segoe
+	 UI"\,sans-serif\;color:#242424'><a href="mailto:teams@pexip.boeing.com">t
+	eams@pexip.boeing.com</a></span></span><span style='font-family:"Segoe UI"
+	\,sans-serif\;color:#242424'> <o:p></o:p></span></p></div><div style='marg
+	in-bottom:4.5pt'><p class=MsoNormal><span class=me-email-text-secondary><s
+	pan style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#61
+	6161'>Video ID: </span></span><span class=me-email-text><span style='font-
+	size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#242424'>514 409 71
+	4 2</span></span><span style='font-family:"Segoe UI"\,sans-serif\;color:#2
+	42424'> <o:p></o:p></span></p></div><div style='margin-bottom:.25in'><p cl
+	ass=MsoNormal><span style='font-family:"Segoe UI"\,sans-serif\;color:#2424
+	24'><a href="https://pexpedge01.pexip.boeing.com/teams/?conf=5144097142&am
+	p\;ivr=teams&amp\;d=pexip.boeing.com&amp\;ip=20.158.224.248&amp\;test=test
+	_call&amp\;w" target="_blank"><span style='font-size:10.5pt\;color:#5B5FC7
+	'>More info</span></a> <o:p></o:p></span></p></div><div><p class=MsoNormal
+	><span class=me-email-text-secondary><span style='font-size:10.5pt\;font-f
+	amily:"Segoe UI"\,sans-serif\;color:#616161'>For organizers: </span></span
+	><span style='font-family:"Segoe UI"\,sans-serif\;color:#242424'><a href="
+	https://gov.teams.microsoft.us/meetingOptions/?organizerId=baa51ec4-8028-4
+	4dc-8e74-e4532a7164bd&amp\;tenantId=bcf48bba-4d6f-4dee-a0d2-7df59cc36629&a
+	mp\;threadId=19_gcch_meeting_e928084201904902b18c4edc26592a9d@thread.v2&am
+	p\;messageId=0&amp\;language=en-US" target="_blank"><span style='font-size
+	:10.5pt\;color:#5B5FC7'>Meeting options</span></a> </span><span style='fon
+	t-family:"Segoe UI"\,sans-serif\;color:#616161'>|</span><span style='font-
+	family:"Segoe UI"\,sans-serif\;color:#242424'> <a href="https://dialin.cpc
+	.gov.teams.microsoft.us/usp" target="_blank"><span style='font-size:10.5pt
+	\;color:#5B5FC7'>Reset dial-in PIN</span></a> <o:p></o:p></span></p></div>
+	<div style='margin-top:.25in\;margin-bottom:4.5pt'><p class=MsoNormal><spa
+	n style='font-family:"Segoe UI"\,sans-serif\;color:#242424\;mso-ligatures:
+	none'><img border=0 width=300 height=119 style='width:3.125in\;height:1.23
+	95in' id="_x0000_i1026" src="https://www.boeing.com/content/theboeingcompa
+	ny/us/en/company/key-orgs/brand/_jcr_content/root/container/container_1690
+	781466/image.coreimg.85.1600.jpeg/1702305421285/boeing-logo-300x119.jpeg">
+	</span><span style='font-family:"Segoe UI"\,sans-serif\;color:#242424'><o:
+	p></o:p></span></p></div><div style='margin-bottom:.25in\;overflow:hidden'
+	><p class=MsoNormal><span style='font-family:"Segoe UI"\,sans-serif\;color
+	:#242424'>________________________________________________________________
+	________________<o:p></o:p></span></p></div></div><p class=MsoNormal><span
+	 style='font-size:11.0pt\;font-family:"Calibri Light"\,sans-serif'><o:p>&n
+	bsp\;</o:p></span></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTLASTSEQUENCE:1
+X-MS-OLK-APPTSEQTIME:20260106T180515Z
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
