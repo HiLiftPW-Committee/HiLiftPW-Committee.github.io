@@ -30,6 +30,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/HLPW6/cases";
               },
+            },{id: "dropdown-grids",
+              title: "Grids",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/grids";
+              },
             },{id: "dropdown-faqs",
               title: "FAQs",
               description: "",
