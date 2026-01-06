@@ -100,7 +100,10 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "news-updated-website-launched",
+        },{id: "news-hlpw-6-kickoff-meeting-scheduled-for-tuesday-january-20th-7am-pacific-calendar-invite",
+          title: 'HLPW-6 Kickoff meeting scheduled for Tuesday January 20th, 7am Pacific. Calendar Invite.',
+          description: "",
+          section: "News",},{id: "news-updated-website-launched",
           title: 'Updated website launched',
           description: "",
           section: "News",},{
