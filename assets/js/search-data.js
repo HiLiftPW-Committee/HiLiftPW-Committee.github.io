@@ -106,6 +106,9 @@ ninja.data = [{
           section: "News",},{id: "news-hlpw-6-kickoff-meeting-scheduled-for-tuesday-january-20th-7am-pacific-calendar-invitation",
           title: 'HLPW-6 Kickoff meeting scheduled for Tuesday January 20th, 7am Pacific.  Calendar Invitation',
           description: "",
+          section: "News",},{id: "news-we-ll-also-hold-an-in-person-version-of-kick-off-meeting-at-aiaa-scitech-wednesday-january-14th-6pm-in-celebration-5",
+          title: 'We’ll also hold an in-person version of kick-off meeting at AIAA SciTech! Wednesday,...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
