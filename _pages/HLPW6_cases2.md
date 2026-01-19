@@ -24,7 +24,10 @@ The CRM-HLS (Simplified High-Lift Common Research Model) test case is designed t
 
 # Test Case 2: CRM-HL Configuration Buildup
 This test case is available to assess the ability of CFD to predict the effect of varying geometric fidelity through component build-up to help isolate specific types of flow physics associated with high-lift aerodynamics. Geometry is provided for four separate geometric configurations of increasing levels of complexity, with simulations to be performed free-air and compared to fully corrected data. Experimental data will be provided from wind tunnel campaigns utilizing both the ONERA [3] and Boeing models, tested at the ONERA F1 and QinetiQ 5m facilities, respectively. This test case is a duplicate of HLPW5 Test Case 2, as many questions were raised during the course of that workshop that weren’t satisfactorily answered. 
+
 ![CRM-HL Configuration Buildup](https://aiaa-hlpw.org/assets/img/TC2.png)
+
+![Test Case 2 Geometry](https://commonresearchmodel.larc.nasa.gov/high-lift-prediction-workshop-5-cad-files/)
 
 # References
 1.	Lacy and Clark, “Definition of Initial Landing and Takeoff Reference Configurations for the High Lift Common Research Model (CRM-HL)”, AIAA-2020-2771, AIAA Aviation 2020 Forum, Virtual Event, June 2020.
