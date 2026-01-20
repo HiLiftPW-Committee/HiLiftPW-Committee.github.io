@@ -6,9 +6,7 @@ nav: false
 ---
 
 ### Overview
-HLPW-6 is a continuation in the series of High Lift Prediction Workshops. This workshop will officially launch in January 2026, and is expected to take place at AIAA Aviation, in June 2027.
+HLPW-6 is a continuation in the series of High Lift Prediction Workshops. This workshop is officially underway as of January 2026, and is expected to take place at AIAA Aviation, in June 2027. If interested in joining, please see the Technical Focus Group page, and e-mail the leader(s) of the TFG's that you'd like to join.
 
-### Upcoming Events
-* January 14, 2026: HLPW-6 In-Person Launch Meeting at AIAA SciTech, Orlando, FL. 6pm in Celebration 5
-* January 20, 2026: HLPW-6 Virtual Launch Meeting. 7am PST. <a href="https://aiaa-hlpw.org/assets/other/HLPW6_Kickoff.ics">Calendar Invitation</a>
+[HLPW6 Kickoff Slides](https://aiaa-hlpw.org/assets/HLPW6/HLPW6_Launch_v1.pdf)
 
