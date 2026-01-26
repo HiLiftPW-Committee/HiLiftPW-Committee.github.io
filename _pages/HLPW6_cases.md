@@ -23,10 +23,13 @@ The CRM-HLS (Simplified High-Lift Common Research Model) test case is designed t
 
 [Test Case Description Document](https://aiaa-hlpw.org/assets/HLPW6/HLPW6_Test_Case_1_v1.0.pdf)
 
-Test Case 1 Geometry:
-[CATPart](https://aiaa-hlpw.org/assets/HLPW6/CRM_HLS_HLPW6_TC1.CATPart)
+#### Test Case 1 Geometry:
 [STP](https://aiaa-hlpw.org/assets/HLPW6/CRM_HLS_HLPW6_TC1.stp)
 [IGS](https://aiaa-hlpw.org/assets/HLPW6/CRM_HLS_HLPW6_TC1.igs)
+
+1/26 update: Removed CATPart, as it didn't appear to be robust across CATIA versions. Please use the STP and IGS provided.
+
+---
 
 # Test Case 2: CRM-HL Configuration Buildup
 This test case is available to assess the ability of CFD to predict the effect of varying geometric fidelity through component build-up to help isolate specific types of flow physics associated with high-lift aerodynamics. Geometry is provided for four separate geometric configurations of increasing levels of complexity, with simulations to be performed free-air and compared to fully corrected data. Experimental data will be provided from wind tunnel campaigns utilizing both the ONERA [3] and Boeing models, tested at the ONERA F1 and QinetiQ 5m facilities, respectively. This test case is a duplicate of HLPW5 Test Case 2, as many questions were raised during the course of that workshop that weren’t satisfactorily answered. 
