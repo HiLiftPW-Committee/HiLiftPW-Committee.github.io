@@ -11,24 +11,34 @@ HLPW-6 work will be conducted within Technical Focus Groups, allowing researcher
 ## Reynolds-Averaged Navier Stokes
 This TFG focuses specifically on RANS methodologies. In HLPW-6, this serves as a combined fixed-grid RANS and Adaptive RANS community.
 
-### Leaders: 
+#### Leaders: 
 * <a href="mailto:boris.diskin@nasa.gov">Boris Diskin (NASA Langley)</a>
 * <a href="mailto:mike@flexcompute.com">Mike Park (FlexCompute)</a>
+
+#### Next Meeting: January 28.
 
 ## Scale-Resolving
 This TFG focuses on time accurate, turbulence resolving solvers, and is a combination of both the Wall-Modeled Large Eddy Simulation TFG, and the Hybrid-RANS-LES TFG from HLPW-5.
 
-### Leader:
+#### Leader:
 * <a href="mailto:konrad.a.goc@boeing.com">Konrad Goc (Boeing)</a>
+* <a href="mailto:eduardo.molina@embraer.com.br">Eduardo Molina (Embraer)</a>
+* <a href="mailto:heathcote.daniel@aurora.aero">Dan Heathcote (Aurora Flight Sciences) (Deputy Lead)</a>
+
+#### Next Meeting: January 27.
 
 ## High-Order TFG
 The High-Order TFG focuses exclusively on solvers 3rd order accurate, or higher.
 
-### Leader:
+#### Leader:
 * <a href="mailto:galbramc@mit.edu">Marshall Galbraith (MIT)</a>
+
+#### Next Meeting: TBD.
 
 ## Artificial Intelligence & Machine Learning
 The AI/ML TFG is new for HLPW-6. The scope is still under development, but preliminary emphasis will be on developing surrogate models to cover a large CRM-HL dataset.
 
 ### Leader:
 * <a href="mailto:nashton@nvidia.com">Neil Ashton (NVIDIA)</a>
+
+#### Next Meeting: TBD.
