@@ -106,8 +106,8 @@ ninja.data = [{
           section: "News",},{id: "news-hlpw-6-kickoff-meeting-held-tuesday-january-20th-7am-pacific-hlpw6-kickoff-slides",
           title: 'HLPW-6 Kickoff meeting held Tuesday January 20th, 7am Pacific.  HLPW6 Kickoff Slides',
           description: "",
-          section: "News",},{id: "news-we-ll-also-hold-an-in-person-version-of-kick-off-meeting-at-aiaa-scitech-wednesday-january-14th-6pm-in-celebration-5",
-          title: 'We’ll also hold an in-person version of kick-off meeting at AIAA SciTech! Wednesday,...',
+          section: "News",},{id: "news-test-case-page-updated-and-full-description-of-test-case-1-posted",
+          title: 'Test Case page updated, and full description of Test Case 1 posted!',
           description: "",
           section: "News",},{
         id: 'social-email',
