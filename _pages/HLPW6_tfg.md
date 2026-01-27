@@ -17,7 +17,7 @@ This TFG focuses specifically on RANS methodologies. In HLPW-6, this serves as a
 * <a href="mailto:boris.diskin@nasa.gov">Boris Diskin (NASA Langley)</a>
 * <a href="mailto:mike@flexcompute.com">Mike Park (FlexCompute)</a>
 
-#### Next Meeting: January 28.
+#### Next Meeting: January 28
 
 ---
 
@@ -29,7 +29,7 @@ This TFG focuses on time accurate, turbulence resolving solvers, and is a combin
 * <a href="mailto:eduardo.molina@embraer.com.br">Eduardo Molina (Embraer)</a>
 * <a href="mailto:heathcote.daniel@aurora.aero">Dan Heathcote (Aurora Flight Sciences) (Deputy Lead)</a>
 
-#### Next Meeting: January 27.
+#### Next Meeting: February 10
 
 ---
 
@@ -39,7 +39,7 @@ The High-Order TFG focuses exclusively on solvers 3rd order accurate, or higher.
 #### Leader:
 * <a href="mailto:galbramc@mit.edu">Marshall Galbraith (MIT)</a>
 
-#### Next Meeting: TBD.
+#### Next Meeting: TBD
 
 ---
 
@@ -49,4 +49,4 @@ The AI/ML TFG is new for HLPW-6. The scope is still under development, but preli
 ### Leader:
 * <a href="mailto:nashton@nvidia.com">Neil Ashton (NVIDIA)</a>
 
-#### Next Meeting: TBD.
+#### Next Meeting: TBD
