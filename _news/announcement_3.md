@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-01-08
+date: 2026-01-21
 inline: true
 related_posts: false
 ---
 
-We'll also hold an in-person version of kick-off meeting at AIAA SciTech! Wednesday, January 14th, 6pm in Celebration 5. 
+Test Case page updated, and full description of Test Case 1 posted!
