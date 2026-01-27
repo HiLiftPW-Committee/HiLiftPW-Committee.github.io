@@ -109,6 +109,9 @@ ninja.data = [{
           section: "News",},{id: "news-test-case-page-updated-and-full-description-of-test-case-1-posted",
           title: 'Test Case page updated, and full description of Test Case 1 posted!',
           description: "",
+          section: "News",},{id: "news-technical-focus-groups-are-starting-this-week-we-have-srs-on-tuesday-1-27-7am-pacific-and-rans-on-wednesday-1-28-7am-pacific-with-both-recurring-every-two-weeks-please-get-in-touch-with-tfg-leads-if-you-d-like-the-meeting-details",
+          title: 'Technical Focus Groups are starting this week! We have SRS on Tuesday (1/27)...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
