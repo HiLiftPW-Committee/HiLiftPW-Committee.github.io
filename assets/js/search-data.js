@@ -49,28 +49,28 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/HLPW6/TFG/RANS";
+                window.location.href = "/HLPW6/TFG_RANS";
               },
             },{id: "dropdown-scale-resolving",
               title: "Scale-Resolving",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/HLPW6/TFG/SRS";
+                window.location.href = "/HLPW6/TFG_SRS";
               },
             },{id: "dropdown-high-order",
               title: "High-Order",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/HLPW6/TFG/HO";
+                window.location.href = "/HLPW6/TFG_HO";
               },
             },{id: "dropdown-ai-ml",
               title: "AI/ML",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/HLPW6/TFG/AIML";
+                window.location.href = "/HLPW6/TFG_AIML";
               },
             },{id: "dropdown-hlpw5",
               title: "HLPW5",
