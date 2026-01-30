@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /HLPW6/TFG/RANS
+permalink: /HLPW6/TFG_RANS
 title: HLPW6 Reynolds-Avereaged Navier-Stokes TFG
 nav: false
 ---
