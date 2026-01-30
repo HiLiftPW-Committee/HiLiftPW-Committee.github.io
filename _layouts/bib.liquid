@@ -52,7 +52,8 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <!div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="bib-entry-item {% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}" data-keywords="{{ entry_keywords }}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
