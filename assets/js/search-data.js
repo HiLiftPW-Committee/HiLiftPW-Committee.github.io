@@ -72,14 +72,7 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/HLPW6/TFG/AIML";
               },
-            },{id: "nav-committee",
-          title: "Committee",
-          description: "Members of the organizing committee",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/committee/";
-          },
-        },{id: "dropdown-hlpw5",
+            },{id: "dropdown-hlpw5",
               title: "HLPW5",
               description: "",
               section: "Dropdown",
@@ -127,6 +120,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
+          },
+        },{id: "nav-committee",
+          title: "Committee",
+          description: "Members of the organizing committee",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/committee/";
           },
         },{id: "news-updated-website-launched",
           title: 'Updated website launched',
