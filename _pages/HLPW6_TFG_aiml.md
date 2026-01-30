@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /HLPW6/TFG/AIML
+permalink: /HLPW6/TFG_AIML
 title: HLPW6 Artificial Intelligence & Machine Learning TFG
 nav: false
 ---
