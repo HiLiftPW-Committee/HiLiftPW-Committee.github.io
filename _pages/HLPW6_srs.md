@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /HLPW6/srs
+permalink: /HLPW6/TFG/srs
 title: HLPW6 Scale Resolving Simulations TFG
 nav: false
 ---
