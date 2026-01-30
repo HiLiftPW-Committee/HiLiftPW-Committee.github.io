@@ -109,24 +109,20 @@ document.querySelectorAll('#keyword-filters button[data-filter]').forEach(button
     
     // 1. UI TOGGLING LOGIC
     if (filter === 'all') {
-      // Clear all specific filters and activate "All"
-      document.querySelectorAll('#keyword-filters button').forEach(btn => {
+      document.querySelectorAll('#keyword-filters button[data-filter]').forEach(btn => {
         btn.classList.replace('btn-primary', 'btn-outline-primary');
         btn.classList.remove('active');
       });
       this.classList.replace('btn-outline-primary', 'btn-primary');
       this.classList.add('active');
     } else {
-      // Toggle the clicked button
       this.classList.toggle('active');
       this.classList.toggle('btn-primary');
       this.classList.toggle('btn-outline-primary');
       
-      // Turn off "All" button
       allBtn.classList.replace('btn-primary', 'btn-outline-primary');
       allBtn.classList.remove('active');
 
-      // If no buttons remain active, default back to "All"
       if (document.querySelectorAll('#keyword-filters button.active').length === 0) {
         allBtn.click();
         return;
@@ -140,31 +136,25 @@ document.querySelectorAll('#keyword-filters button[data-filter]').forEach(button
     const items = document.querySelectorAll('.bib-entry-item');
     items.forEach(item => {
       const itemKeywords = (item.getAttribute('data-keywords') || "").toLowerCase();
-      
-      // Paper must contain EVERY selected filter keyword
       const matchesAll = activeFilters.includes('all') || 
                          activeFilters.every(f => itemKeywords.includes(f));
       
-        // By hiding the .row itself, all margins and padding vanish
       if (matchesAll) {
-        item.style.setProperty('display', 'flex', 'important'); // Rows use flex by default
+        item.style.setProperty('display', 'flex', 'important'); 
       } else {
         item.style.setProperty('display', 'none', 'important');
       }
-
     });
 
-    // 3. HIDE EMPTY YEAR BLOCKS
-    // Targets the <h2> or <h3> year headers in the al-folio bibliography
+    // 3. HIDE EMPTY YEAR BLOCKS (Fixed to work with flex)
     document.querySelectorAll('.publications h2, .publications h3').forEach(header => {
-      // Find the next element, which is usually the <ol> or <div> containing the papers
       const listContainer = header.nextElementSibling;
-      
       if (listContainer) {
-        // Count how many papers inside this year are currently visible
-        const visiblePapers = listContainer.querySelectorAll('.bib-entry-item[style*="display: block"]');
+        // Check for any item that is NOT display: none
+        const visibleInGroup = Array.from(listContainer.querySelectorAll('.bib-entry-item'))
+                                    .some(item => item.style.display !== 'none');
         
-        if (visiblePapers.length > 0) {
+        if (visibleInGroup) {
           header.style.setProperty('display', 'block', 'important');
           listContainer.style.setProperty('display', 'block', 'important');
         } else {
@@ -176,5 +166,6 @@ document.querySelectorAll('#keyword-filters button[data-filter]').forEach(button
   });
 });
 </script>
+
 
 
