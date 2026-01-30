@@ -13,6 +13,12 @@ nav_order: 4
 
 {% include bib_search.liquid %}
 
+<div id="keyword-filters" class="button-group" style="margin-bottom: 20px;">
+  <button class="btn btn-sm btn-outline-primary active" data-filter="all">All</button>
+  <button class="btn btn-sm btn-outline-primary" data-filter="machine-learning">HLPW5</button>
+  <button class="btn btn-sm btn-outline-primary" data-filter="robotics">Summary</button>
+</div>
+
 <div class="publications">
 
 {% bibliography %}
