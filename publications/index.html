@@ -44,7 +44,13 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
       const matchesAll = activeFilters.includes('all') || 
                          activeFilters.every(f => itemKeywords.includes(f));
       
-      item.style.setProperty('display', matchesAll ? 'block' : 'none', 'important');
+        // By hiding the .row itself, all margins and padding vanish
+      if (matchesAll) {
+        item.style.setProperty('display', 'flex', 'important'); // Rows use flex by default
+      } else {
+        item.style.setProperty('display', 'none', 'important');
+      }
+
     });
 
     // 3. HIDE EMPTY YEAR BLOCKS
