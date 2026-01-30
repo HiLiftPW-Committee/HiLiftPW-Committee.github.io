@@ -1,9 +1,20 @@
 ---
-layout: default
+layout: page
 permalink: /HLPW6/TFG
 title: HLPW6 Focus Groups
 nav: false
+dropdown: true
+children:
+  - title: RANS
+    permalink: /HLPW6/TFG/RANS
+  - title: Scale-Resolving
+    permalink: /HLPW6/TFG/SRS
+  - title: High-Order
+    permalink: /HLPW6/TG/HO
+  - title: AI/ML
+    permalink: /HLPW6/TFG/AIML
 ---
+
 
 # Technical Focus Groups
 HLPW-6 work will be conducted within Technical Focus Groups, allowing researchers to actively collaborate to answer key questions posed, using the test cases described. To join a specific TFG, just e-mail the leader requesting to be added to their distribution list, attend the meetings, and participate.
