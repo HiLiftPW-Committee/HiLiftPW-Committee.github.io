@@ -24,3 +24,24 @@ nav_order: 4
 {% bibliography %}
 
 </div>
+
+<script>
+document.querySelectorAll('#keyword-filters button').forEach(button => {
+  button.addEventListener('click', function() {
+    // UI update: active button
+    document.querySelector('#keyword-filters .active').classList.remove('active');
+    this.classList.add('active');
+
+    const filter = this.getAttribute('data-filter');
+    const items = document.querySelectorAll('.bib-entry-item');
+
+    items.forEach(item => {
+      if (filter === 'all' || item.getAttribute('data-keywords').includes(filter)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
