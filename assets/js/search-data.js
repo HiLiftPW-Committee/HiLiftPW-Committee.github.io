@@ -44,6 +44,34 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/HLPW6/faq";
               },
+            },{id: "dropdown-rans",
+              title: "RANS",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG/RANS";
+              },
+            },{id: "dropdown-scale-resolving",
+              title: "Scale-Resolving",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG/SRS";
+              },
+            },{id: "dropdown-high-order",
+              title: "High-Order",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TG/HO";
+              },
+            },{id: "dropdown-ai-ml",
+              title: "AI/ML",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG/AIML";
+              },
             },{id: "dropdown-hlpw5",
               title: "HLPW5",
               description: "",
