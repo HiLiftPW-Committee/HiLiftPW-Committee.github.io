@@ -13,6 +13,8 @@ nav_order: 4
 
 {% include bib_search.liquid %}
 
+---
+
 <div id="keyword-filters" style="margin-bottom: 30px;">
   <!-- Row 1: Reset -->
   <div class="row mb-3">
@@ -34,22 +36,33 @@ nav_order: 4
       <button class="btn btn-sm btn-outline-primary" data-filter="hlpw1">HLPW1</button>
     </div>
   </div>
-
-  <!-- Row 3: Methodologies -->
+  
+  <!-- Row 3: Type -->
   <div class="row">
+    <div class="col-md-2">
+      <h6 class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 8px;">Type</h6>
+    </div>
+    <div class="col-md-10 button-group">
+      <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="exp">Experiment</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="participant">Participant Papers</button>
+    </div>
+  </div>
+  
+  <!-- Row 4: Methodology -->
+  <div class="row mb-2">
     <div class="col-md-2">
       <h6 class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 8px;">Methodology</h6>
     </div>
     <div class="col-md-10 button-group">
-      <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
       <button class="btn btn-sm btn-outline-primary" data-filter="rans">RANS</button>
       <button class="btn btn-sm btn-outline-primary" data-filter="srs">Scale Resolving</button>
       <button class="btn btn-sm btn-outline-primary" data-filter="ho">High-Order</button>
       <button class="btn btn-sm btn-outline-primary" data-filter="ml">Machine Learning</button>
-      <button class="btn btn-sm btn-outline-primary" data-filter="exp">Experiment</button>
     </div>
   </div>
 </div>
+
 
 <style>
   #keyword-filters .btn {
