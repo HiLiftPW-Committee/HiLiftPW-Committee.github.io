@@ -45,7 +45,8 @@ nav_order: 4
     <div class="col-md-10 button-group">
       <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
       <button class="btn btn-sm btn-outline-primary" data-filter="exp">Experiment</button>
-      <button class="btn btn-sm btn-outline-primary" data-filter="participant">Participant Papers</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="ecosystem">CRM-HL Ecosystem</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="participant">Participant</button>
     </div>
   </div>
   
