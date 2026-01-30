@@ -13,11 +13,58 @@ nav_order: 4
 
 {% include bib_search.liquid %}
 
-<div id="keyword-filters" class="button-group" style="margin-bottom: 20px;">
-  <button class="btn btn-sm btn-outline-primary active" data-filter="all">All</button>
-  <button class="btn btn-sm btn-outline-primary" data-filter="hlpw5">HLPW5</button>
-  <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
+<div id="keyword-filters" style="margin-bottom: 30px;">
+  <!-- Row 1: Reset -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <button class="btn btn-sm btn-primary active" data-filter="all">All Publications</button>
+    </div>
+  </div>
+
+  <!-- Row 2: Workshops -->
+  <div class="row mb-2">
+    <div class="col-md-2">
+      <h6 class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 8px;">Workshops</h6>
+    </div>
+    <div class="col-md-10 button-group">
+      <button class="btn btn-sm btn-outline-primary" data-filter="hlpw5">HLPW5</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="hlpw4">HLPW4</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="hlpw3">HLPW3</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="hlpw2">HLPW2</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="hlpw1">HLPW1</button>
+    </div>
+  </div>
+
+  <!-- Row 3: Methodologies -->
+  <div class="row">
+    <div class="col-md-2">
+      <h6 class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 8px;">Methodology</h6>
+    </div>
+    <div class="col-md-10 button-group">
+      <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="rans">RANS</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="srs">Scale Resolving</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="ho">High-Order</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="ml">Machine Learning</button>
+      <button class="btn btn-sm btn-outline-primary" data-filter="exp">Experiment</button>
+    </div>
+  </div>
 </div>
+
+<style>
+  #keyword-filters .btn {
+    margin-right: 4px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+  }
+  /* Optional: Align headers better on mobile */
+  @media (max-width: 768px) {
+    #keyword-filters h6 { margin-bottom: 10px; }
+  }
+</style>
+
 
 <div class="publications">
 
@@ -29,35 +76,32 @@ nav_order: 4
 document.querySelectorAll('#keyword-filters button').forEach(button => {
   button.addEventListener('click', function() {
     const filter = this.getAttribute('data-filter').toLowerCase();
-    const allButton = document.querySelector('#keyword-filters [data-filter="all"]');
+    const allBtn = document.querySelector('#keyword-filters [data-filter="all"]');
     
+    // 1. Handle UI Toggling
     if (filter === 'all') {
-      // Unselect everything else and select ONLY "All"
       document.querySelectorAll('#keyword-filters button').forEach(btn => {
-        btn.classList.remove('active', 'btn-primary');
-        btn.classList.add('btn-outline-primary');
+        btn.classList.replace('btn-primary', 'btn-outline-primary');
+        btn.classList.remove('active');
       });
-      this.classList.add('active', 'btn-primary');
-      this.classList.remove('btn-outline-primary');
+      this.classList.replace('btn-outline-primary', 'btn-primary');
+      this.classList.add('active');
     } else {
-      // Toggle the clicked button
       this.classList.toggle('active');
       this.classList.toggle('btn-primary');
       this.classList.toggle('btn-outline-primary');
       
-      // Unselect "All" since we are using specific filters
-      allButton.classList.remove('active', 'btn-primary');
-      allButton.classList.add('btn-outline-primary');
-      
-      // If no buttons are left active, default back to "All"
-      const activeButtons = document.querySelectorAll('#keyword-filters button.active');
-      if (activeButtons.length === 0) {
-        allButton.click();
+      allBtn.classList.replace('btn-primary', 'btn-outline-primary');
+      allBtn.classList.remove('active');
+
+      // Default back to "All" if nothing is selected
+      if (document.querySelectorAll('#keyword-filters button.active').length === 0) {
+        allBtn.click();
         return;
       }
     }
 
-    // Run the actual filtering
+    // 2. Multi-Filter Logic (AND)
     const activeFilters = Array.from(document.querySelectorAll('#keyword-filters button.active'))
                                .map(btn => btn.getAttribute('data-filter').toLowerCase());
     
@@ -65,14 +109,15 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
     items.forEach(item => {
       const itemKeywords = (item.getAttribute('data-keywords') || "").toLowerCase();
       
-      // Show if "All" is active OR if paper matches ANY selected keyword
-      const isVisible = activeFilters.includes('all') || 
-                        activeFilters.some(f => itemKeywords.includes(f));
+      // Use .every() to ensure paper has ALL selected keywords
+      const matchesAll = activeFilters.includes('all') || 
+                         activeFilters.every(f => itemKeywords.includes(f));
       
-      item.style.setProperty('display', isVisible ? 'block' : 'none', 'important');
+      item.style.setProperty('display', matchesAll ? 'block' : 'none', 'important');
     });
   });
 });
 </script>
+
 
 
