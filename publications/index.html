@@ -6,8 +6,9 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
     const filter = this.getAttribute('data-filter').toLowerCase();
     const allBtn = document.querySelector('#keyword-filters [data-filter="all"]');
     
-    // 1. Handle UI Toggling
+    // 1. UI TOGGLING LOGIC
     if (filter === 'all') {
+      // Clear all specific filters and activate "All"
       document.querySelectorAll('#keyword-filters button').forEach(btn => {
         btn.classList.replace('btn-primary', 'btn-outline-primary');
         btn.classList.remove('active');
@@ -15,21 +16,23 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
       this.classList.replace('btn-outline-primary', 'btn-primary');
       this.classList.add('active');
     } else {
+      // Toggle the clicked button
       this.classList.toggle('active');
       this.classList.toggle('btn-primary');
       this.classList.toggle('btn-outline-primary');
       
+      // Turn off "All" button
       allBtn.classList.replace('btn-primary', 'btn-outline-primary');
       allBtn.classList.remove('active');
 
-      // Default back to "All" if nothing is selected
+      // If no buttons remain active, default back to "All"
       if (document.querySelectorAll('#keyword-filters button.active').length === 0) {
         allBtn.click();
         return;
       }
     }
 
-    // 2. Multi-Filter Logic (AND)
+    // 2. FILTERING LOGIC (AND)
     const activeFilters = Array.from(document.querySelectorAll('#keyword-filters button.active'))
                                .map(btn => btn.getAttribute('data-filter').toLowerCase());
     
@@ -37,11 +40,31 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
     items.forEach(item => {
       const itemKeywords = (item.getAttribute('data-keywords') || "").toLowerCase();
       
-      // Use .every() to ensure paper has ALL selected keywords
+      // Paper must contain EVERY selected filter keyword
       const matchesAll = activeFilters.includes('all') || 
                          activeFilters.every(f => itemKeywords.includes(f));
       
       item.style.setProperty('display', matchesAll ? 'block' : 'none', 'important');
+    });
+
+    // 3. HIDE EMPTY YEAR BLOCKS
+    // Targets the <h2> or <h3> year headers in the al-folio bibliography
+    document.querySelectorAll('.publications h2, .publications h3').forEach(header => {
+      // Find the next element, which is usually the <ol> or <div> containing the papers
+      const listContainer = header.nextElementSibling;
+      
+      if (listContainer) {
+        // Count how many papers inside this year are currently visible
+        const visiblePapers = listContainer.querySelectorAll('.bib-entry-item[style*="display: block"]');
+        
+        if (visiblePapers.length > 0) {
+          header.style.setProperty('display', 'block', 'important');
+          listContainer.style.setProperty('display', 'block', 'important');
+        } else {
+          header.style.setProperty('display', 'none', 'important');
+          listContainer.style.setProperty('display', 'none', 'important');
+        }
+      }
     });
   });
 });
