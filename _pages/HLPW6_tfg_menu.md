@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /HLPW6/TFG
-title: HLPW6 TFGs
+title: TFGs
 nav: true
 nav_order: 2
 dropdown: true
@@ -11,7 +11,7 @@ children:
   - title: Scale-Resolving
     permalink: /HLPW6/TFG/SRS
   - title: High-Order
-    permalink: /HLPW6/TG/HO
+    permalink: /HLPW6/TFG/HO
   - title: AI/ML
     permalink: /HLPW6/TFG/AIML
 ---
