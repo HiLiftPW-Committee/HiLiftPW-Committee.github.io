@@ -15,8 +15,8 @@ nav_order: 4
 
 <div id="keyword-filters" class="button-group" style="margin-bottom: 20px;">
   <button class="btn btn-sm btn-outline-primary active" data-filter="all">All</button>
-  <button class="btn btn-sm btn-outline-primary" data-filter="machine-learning">HLPW5</button>
-  <button class="btn btn-sm btn-outline-primary" data-filter="robotics">Summary</button>
+  <button class="btn btn-sm btn-outline-primary" data-filter="hlpw5">HLPW5</button>
+  <button class="btn btn-sm btn-outline-primary" data-filter="summary">Summary</button>
 </div>
 
 <div class="publications">
