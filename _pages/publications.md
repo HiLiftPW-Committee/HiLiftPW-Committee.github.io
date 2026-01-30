@@ -28,21 +28,51 @@ nav_order: 4
 <script>
 document.querySelectorAll('#keyword-filters button').forEach(button => {
   button.addEventListener('click', function() {
-    // UI update: active button
-    document.querySelector('#keyword-filters .active').classList.remove('active');
-    this.classList.add('active');
-
-    const filter = this.getAttribute('data-filter');
-    const items = document.querySelectorAll('.bib-entry-item');
-
-    items.forEach(item => {
-      if (filter === 'all' || item.getAttribute('data-keywords').toLowerCase().includes(filter.toLowerCase())) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
+    const filter = this.getAttribute('data-filter').toLowerCase();
+    const allButton = document.querySelector('#keyword-filters [data-filter="all"]');
+    
+    if (filter === 'all') {
+      // Unselect everything else and select ONLY "All"
+      document.querySelectorAll('#keyword-filters button').forEach(btn => {
+        btn.classList.remove('active', 'btn-primary');
+        btn.classList.add('btn-outline-primary');
+      });
+      this.classList.add('active', 'btn-primary');
+      this.classList.remove('btn-outline-primary');
+    } else {
+      // Toggle the clicked button
+      this.classList.toggle('active');
+      this.classList.toggle('btn-primary');
+      this.classList.toggle('btn-outline-primary');
+      
+      // Unselect "All" since we are using specific filters
+      allButton.classList.remove('active', 'btn-primary');
+      allButton.classList.add('btn-outline-primary');
+      
+      // If no buttons are left active, default back to "All"
+      const activeButtons = document.querySelectorAll('#keyword-filters button.active');
+      if (activeButtons.length === 0) {
+        allButton.click();
+        return;
       }
+    }
+
+    // Run the actual filtering
+    const activeFilters = Array.from(document.querySelectorAll('#keyword-filters button.active'))
+                               .map(btn => btn.getAttribute('data-filter').toLowerCase());
+    
+    const items = document.querySelectorAll('.bib-entry-item');
+    items.forEach(item => {
+      const itemKeywords = (item.getAttribute('data-keywords') || "").toLowerCase();
+      
+      // Show if "All" is active OR if paper matches ANY selected keyword
+      const isVisible = activeFilters.includes('all') || 
+                        activeFilters.some(f => itemKeywords.includes(f));
+      
+      item.style.setProperty('display', isVisible ? 'block' : 'none', 'important');
     });
   });
 });
 </script>
+
 
