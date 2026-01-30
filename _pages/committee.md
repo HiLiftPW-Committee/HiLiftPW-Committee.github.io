@@ -4,7 +4,7 @@ permalink: /committee/
 title: Committee
 description: Members of the organizing committee
 nav: true
-nav_order: 3
+nav_order: 5
 ---
 ## Workshop Organizers
 
