@@ -62,6 +62,21 @@ nav_order: 4
       <button class="btn btn-sm btn-outline-primary" data-filter="ml">Machine Learning</button>
     </div>
   </div>
+  
+  <!-- Row 5: Reports -->
+<div class="row">
+  <div class="col-md-2">
+    <h6 class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 8px;">Reports</h6>
+  </div>
+  <div class="col-md-10">
+    <a href="mailto:adam.m.clark@boeing.com?subject=HLPW%20Missing%20Publication%20Report&body=Please%20provide%20the%20paper%20title,%20authors,%20year,%20and%20DOI:" 
+       class="btn btn-sm btn-outline-warning" 
+       style="border-radius: 20px; font-size: 0.8rem;">
+       <i class="fa-solid fa-envelope mr-1"></i> Report Missing Paper
+    </a>
+  </div>
+</div>
+
 </div>
 
 
@@ -87,7 +102,7 @@ nav_order: 4
 </div>
 
 <script>
-document.querySelectorAll('#keyword-filters button').forEach(button => {
+document.querySelectorAll('#keyword-filters button[data-filter]').forEach(button => {
   button.addEventListener('click', function() {
     const filter = this.getAttribute('data-filter').toLowerCase();
     const allBtn = document.querySelector('#keyword-filters [data-filter="all"]');
