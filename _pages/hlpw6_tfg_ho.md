@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /HLPW6/TFG/ho
+permalink: /HLPW6/TFG/HO
 title: HLPW6 High-Order Methods TFG
 nav: false
 ---
