@@ -63,7 +63,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/HLPW6/TG/HO";
+                window.location.href = "/HLPW6/TFG/HO";
               },
             },{id: "dropdown-ai-ml",
               title: "AI/ML",
