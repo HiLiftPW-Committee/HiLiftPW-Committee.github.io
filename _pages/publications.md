@@ -36,8 +36,7 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
     const items = document.querySelectorAll('.bib-entry-item');
 
     items.forEach(item => {
-      if (filter === 'all' || item.getAttribute('data-keywords').toLowerCase().includes(filter.toLowerCase()))
-
+      if (filter === 'all' || item.getAttribute('data-keywords').toLowerCase().includes(filter.toLowerCase())) {
         item.style.display = 'block';
       } else {
         item.style.display = 'none';
@@ -46,3 +45,4 @@ document.querySelectorAll('#keyword-filters button').forEach(button => {
   });
 });
 </script>
+
