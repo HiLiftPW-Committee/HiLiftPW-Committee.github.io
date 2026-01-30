@@ -7,7 +7,9 @@ nav: false
 
 
 # Technical Focus Groups
-HLPW-6 work will be conducted within Technical Focus Groups, allowing researchers to actively collaborate to answer key questions posed, using the test cases described. To join a specific TFG, just e-mail the leader requesting to be added to their distribution list, attend the meetings, and participate.
+HLPW-6 work will be conducted within Technical Focus Groups, allowing researchers to actively collaborate to answer key questions posed, using the test cases described. 
+
+Participation in HLPW6 occurs through Technical Focus Groups that are relevant to your approach. To join a specific TFG, just e-mail the leader requesting to be added to their distribution list, attend the meetings, and participate.
 
 ---
 
@@ -17,8 +19,6 @@ This TFG focuses specifically on RANS methodologies. In HLPW-6, this serves as a
 #### Leaders: 
 * <a href="mailto:boris.diskin@nasa.gov">Boris Diskin (NASA Langley)</a>
 * <a href="mailto:mike@flexcompute.com">Mike Park (FlexCompute)</a>
-
-#### Next Meeting: January 28
 
 ---
 
@@ -30,8 +30,6 @@ This TFG focuses on time accurate, turbulence resolving solvers, and is a combin
 * <a href="mailto:eduardo.molina@embraer.com.br">Eduardo Molina (Embraer)</a>
 * <a href="mailto:heathcote.daniel@aurora.aero">Dan Heathcote (Aurora Flight Sciences) (Deputy Lead)</a>
 
-#### Next Meeting: February 10
-
 ---
 
 ## [High-Order Methods](https://aiaa-hlpw.org/HLPW6/TFG/HO)
@@ -40,8 +38,6 @@ The High-Order TFG focuses exclusively on solvers 3rd order accurate, or higher.
 #### Leader:
 * <a href="mailto:galbramc@mit.edu">Marshall Galbraith (MIT)</a>
 
-#### Next Meeting: TBD
-
 ---
 
 ## [Artificial Intelligence & Machine Learning](https://aiaa-hlpw.org/HLPW6/TFG/AIML)
@@ -49,5 +45,3 @@ The AI/ML TFG is new for HLPW-6. The scope is still under development, but preli
 
 ### Leader:
 * <a href="mailto:nashton@nvidia.com">Neil Ashton (NVIDIA)</a>
-
-#### Next Meeting: TBD
