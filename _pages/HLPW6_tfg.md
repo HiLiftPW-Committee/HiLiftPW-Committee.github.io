@@ -13,7 +13,7 @@ Participation in HLPW6 occurs through Technical Focus Groups that are relevant t
 
 ---
 
-## [Reynolds-Averaged Navier Stokes](https://aiaa-hlpw.org/HLPW6/TFG/RANS)
+## [Reynolds-Averaged Navier Stokes](https://aiaa-hlpw.org/HLPW6/TFG_RANS)
 This TFG focuses specifically on RANS methodologies. In HLPW-6, this serves as a combined fixed-grid RANS and Adaptive RANS community.
 
 #### Leaders: 
@@ -22,7 +22,7 @@ This TFG focuses specifically on RANS methodologies. In HLPW-6, this serves as a
 
 ---
 
-## [Scale-Resolving](https://aiaa-hlpw.org/HLPW6/TFG/SRS)
+## [Scale-Resolving](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
 This TFG focuses on time accurate, turbulence resolving solvers, and is a combination of both the Wall-Modeled Large Eddy Simulation TFG, and the Hybrid-RANS-LES TFG from HLPW-5.
 
 #### Leader:
@@ -32,7 +32,7 @@ This TFG focuses on time accurate, turbulence resolving solvers, and is a combin
 
 ---
 
-## [High-Order Methods](https://aiaa-hlpw.org/HLPW6/TFG/HO)
+## [High-Order Methods](https://aiaa-hlpw.org/HLPW6/TFG_HO)
 The High-Order TFG focuses exclusively on solvers 3rd order accurate, or higher.
 
 #### Leader:
@@ -40,7 +40,7 @@ The High-Order TFG focuses exclusively on solvers 3rd order accurate, or higher.
 
 ---
 
-## [Artificial Intelligence & Machine Learning](https://aiaa-hlpw.org/HLPW6/TFG/AIML)
+## [Artificial Intelligence & Machine Learning](https://aiaa-hlpw.org/HLPW6/TFG_AIML)
 The AI/ML TFG is new for HLPW-6. The scope is still under development, but preliminary emphasis will be on developing surrogate models to cover a large CRM-HL dataset.
 
 ### Leader:
