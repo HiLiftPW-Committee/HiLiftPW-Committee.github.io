@@ -7,8 +7,16 @@ dropdown: true
 children:
   - title: Overview
     permalink: /HLPW6/about
-  - title: TFGs
+  - title: About TFGs
     permalink: /HLPW6/TFG
+  - title: -- RANS
+    permalink: /HLPW6/TFG_RANS
+  - title:  -- Scale-Resolving
+    permalink: /HLPW6/TFG_SRS
+  - title: -- High-Order
+    permalink: /HLPW6/TFG_HO
+  - title: -- AI/ML
+    permalink: /HLPW6/TFG_AIML
   - title: Test Cases
     permalink: /HLPW6/cases
   - title: Grids
