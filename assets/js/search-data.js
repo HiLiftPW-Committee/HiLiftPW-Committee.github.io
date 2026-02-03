@@ -16,12 +16,40 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/HLPW6/about";
               },
-            },{id: "dropdown-tfgs",
-              title: "TFGs",
+            },{id: "dropdown-about-tfgs",
+              title: "About TFGs",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "/HLPW6/TFG";
+              },
+            },{id: "dropdown-rans",
+              title: "-- RANS",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG_RANS";
+              },
+            },{id: "dropdown-scale-resolving",
+              title: "-- Scale-Resolving",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG_SRS";
+              },
+            },{id: "dropdown-high-order",
+              title: "-- High-Order",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG_HO";
+              },
+            },{id: "dropdown-ai-ml",
+              title: "-- AI/ML",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/HLPW6/TFG_AIML";
               },
             },{id: "dropdown-test-cases",
               title: "Test Cases",
