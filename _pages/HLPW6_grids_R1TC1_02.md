@@ -28,3 +28,5 @@ H6C1_RANS_4f [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.2.TC1
 
 H6C1_RANS_4g [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.2.TC1.01/h6c1_rans_4g_1.b8.ugrid.tar.gz)
 [mapbc](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.2.TC1.01/h6c1_rans_4g_1.mapbc)
+
+![CRM-HLS](https://aiaa-hlpw.org/assets/HLPW6/grids/HLPW6_R1TC1_02_GridStats.png)
