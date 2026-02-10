@@ -140,6 +140,9 @@ ninja.data = [{
           section: "News",},{id: "news-technical-focus-groups-are-starting-this-week-we-have-srs-on-tuesday-1-27-7am-pacific-and-rans-on-wednesday-1-28-7am-pacific-with-both-recurring-every-two-weeks-please-get-in-touch-with-tfg-leads-if-you-d-like-the-meeting-details",
           title: 'Technical Focus Groups are starting this week! We have SRS on Tuesday (1/27)...',
           description: "",
+          section: "News",},{id: "news-many-updates-across-website-there-are-new-pages-for-each-tfg-with-content-slowly-being-added-our-first-families-of-grids-published-on-the-hlpw6-grids-page-and-a-more-complete-and-searchable-publications-list",
+          title: 'Many updates across website. There are new pages for each TFG, with content...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
