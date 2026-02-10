@@ -8,7 +8,9 @@ nav: false
 ## Committee Grids for HLPW6
 ---
 ### Grid Families for Test Case 1
-[R.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_01)  HeldenMesh fixed grid family
+[R.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_01)  HeldenMesh fixed grid family (Helden Series 03)
+
+[R.1.TC1.02](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_02)  HeldenMesh Adaptive grid family (Helden Series 04)
 
 ---
 
