@@ -30,3 +30,8 @@ The AIAA CFD High-Lift Prediction Workshop is a collaborative effort organized b
 - Determine the elements of high-lift flow physics that are critical for modeling to enable the development of more accurate prediction methods and tools.
 - Enhance CFD prediction capability for practical high-lift aerodynamic design and optimization.
 
+## Upcoming Events
+### HLPW6 Mini-Workshop #1 at [AIAA Aviation](https://aviation.aiaa.org/)
+- Hybrid option will be available, but in person attendance encouraged!
+- Session: APA-49, Session Title: HLPW6 Mini-Workshop I and All-Hands Tagup
+- Scheduled: June 11, 2026 from 3:30 PM to 5:30 PM Pacific Daylight Time, in room Harbor B
