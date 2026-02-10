@@ -6,7 +6,7 @@ nav: false
 ---
 
 ### R.1.TC1.01 Grid Family
-This family of grids is generated using HeldenMesh. Cell counts and rough sizes can be found in the Readme.
+This family of grids is generated using HeldenMesh, using traditional Fixed Grid methodology. Cell counts and rough sizes can be found in the Readme, or table below.
 
 [Readme.pdf](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/README.pdf)
 
@@ -30,3 +30,5 @@ H6C1_RANS_3f [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1
 
 H6C1_RANS_3g [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/h6c1_rans_3g_1.b8.ugrid.tar.gz)
 [mapbc](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/h6c1_rans_3g_1.mapbc)
+
+![CRM-HLS](https://aiaa-hlpw.org/assets/HLPW6/grids/HLPW6_R1TC1_01_GridStats.png)
