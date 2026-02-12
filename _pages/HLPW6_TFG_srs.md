@@ -83,11 +83,6 @@ Presenter slide sharing:
 - Reynolds number: 3.55 million based on chord (ReC)
 - Built to target slat bracket wake separation on the second outboard bracket
 - No experimental data yet (potentially mid-workshop)
-- Geometric variations:
-  - Slat bracket width/depth
-  - Removable flap
-  - Removable slat
-  - Deflection changes
 
 ## Resources and Support
 - Tecplot complimentary licenses available for workshop participants  
