@@ -8,6 +8,8 @@ nav: false
 ### R.1.TC1.02 Grid Family
 This family of grids is generated using HeldenMesh, using a HeldenAdapt process. This corresponds to the Helden Series 04.
 
+[Description](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HeldenMesh_HLPW6_RANS_Case1B_0211_2026.pdf)
+
 H6C1_RANS_4a [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.02/h6c1_rans_4a_1.b8.ugrid.tar.gz)
 [mapbc](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/h6c1_rans_4a_1.mapbc)
 
