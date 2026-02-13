@@ -6,7 +6,7 @@ nav: false
 ---
 
 ### R.1.TC1.03 Grid Family
-This family of grids is generated using Pointwise, hexhedraons dominated. This corresponds to the Pointwise version F1_Voxel. [description](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.03/HLPW6_TC1_Cadence_HexVoxel_Family_F1.pdf)
+This family of grids is generated using Pointwise, hex dominant. This corresponds to the Pointwise version HexVoxel (F1). [description](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.03/HLPW6_TC1_Cadence_HexVoxel_Family_F1.pdf)
 
 H6C1_RANS_F1_A [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.03/CDS_PW_TC1_F1_Lvl-A.b8.ugrid.tar.gz) [cgns] (https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.03/CDS_PW_TC1_F1_Lvl-A.cgns.tar.gz) [mapbc] (https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.03/CDS_PW_TC1_F1_Lvl-A.mapbc)
 
