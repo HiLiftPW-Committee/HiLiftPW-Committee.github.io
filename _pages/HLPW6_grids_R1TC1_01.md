@@ -8,6 +8,8 @@ nav: false
 ### R.1.TC1.01 Grid Family
 This family of grids is generated using HeldenMesh, using traditional Fixed Grid methodology. This family corresponds to the Helden Series 03 grids. Cell counts and rough sizes can be found in the table below.
 
+[Description](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HeldenMesh_HLPW6_RANS_Case1B_0211_2026.pdf)
+
 H6C1_RANS_3a [ugrid](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/h6c1_rans_3a_1.b8.ugrid.tar.gz)
 [mapbc](https://hlpw6.s3.us-east-1.amazonaws.com/grids/RANS/R.1.TC1.01/h6c1_rans_3a_1.mapbc)
 
