@@ -1,11 +1,11 @@
 ---
 layout: default
-permalink: /HLPW6/grids_H1TC1_01
-title: HLPW6 Grid Family H.1.TC1.01
+permalink: /HLPW6/grids_HO1TC1_01
+title: HLPW6 Grid Family HO.1.TC1.01
 nav: false
 ---
 
-### H.1.TC1.01 Grid Family
+### HO.1.TC1.01 Grid Family
 This family of grids is generated using Pointwise with quadratic (Q2) surface representations. [Mesh statistics](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/H.1.TC1.01/HLPW6-RANS-HO-MeshFamily.xlsx)
 
 H6C1_HO_F2_A [cgns](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/H.1.TC1.01/CDS_PW_TC1_F1_Lvl-A_Q2.zip)
