@@ -16,14 +16,14 @@ nav: false
 
 [R.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_04)  Pointwise grid family (HexIsoTet F2)
 
-[H.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_H1TC1_01) Pointwise quadratic grid family
+[HO.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_01) Pointwise quadratic grid family
 
 ---
 
 ### Naming Key
 [Method].[Fixed/Adapt].[TestCase].[FamilyNumber]
 
-* Method = R (RANS), W (WMLES), or H (HRLES)
+* Method = R (RANS), W (WMLES), H (HRLES), or HO (HighOrder)
 * Fixed/Adapt = 1 (Fixed Grid), 2 (Adapted Grid)
 * TestCase = TC1, TC2, or TC3
 * FamilyNumber = Unique family number assigned for tracking
