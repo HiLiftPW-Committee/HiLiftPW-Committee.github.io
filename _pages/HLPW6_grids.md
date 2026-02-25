@@ -16,6 +16,8 @@ nav: false
 
 [R.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_04)  Pointwise grid family (HexIsoTet F2)
 
+[H.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_H1TC1_01) Pointwise quadratic grid family
+
 ---
 
 ### Naming Key
