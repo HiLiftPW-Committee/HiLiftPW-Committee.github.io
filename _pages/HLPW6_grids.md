@@ -5,9 +5,11 @@ title: HLPW6 Grids
 nav: false
 ---
 
-## Committee Grids for HLPW6
+# Committee Grids for HLPW6
 ---
-### Grid Families for Test Case 1
+## Grid Families for Test Case 1
+
+### RANS
 [R.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_01)  HeldenMesh fixed grid family (Helden Series 03)
 
 [R.1.TC1.02](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_02)  HeldenMesh Adaptive grid family (Helden Series 04)
@@ -16,11 +18,14 @@ nav: false
 
 [R.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_04)  Pointwise grid family (HexIsoTet F2)
 
+### High Order
 [HO.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_01) Pointwise quadratic grid family
+
+[HO.1.TC1.02](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_02) BSC All Tet Q2 grid
 
 ---
 
-### Naming Key
+## Naming Key
 [Method].[Fixed/Adapt].[TestCase].[FamilyNumber]
 
 * Method = R (RANS), W (WMLES), H (HRLES), or HO (HighOrder)
