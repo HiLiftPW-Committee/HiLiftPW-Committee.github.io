@@ -7,7 +7,7 @@ nav: false
 
 # HLPW6: Reynolds-Averaged Navier-Stokes (RANS) Technical Focus Group (TFG)
 
-Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). This group explores RANS solutions for high-lift configurations, focusing on accuracy, iterative and grid convergence, and turbulence modeling for industrial applications. The specific goal of the HLPW6 RANS TFG is to understand and mitigate spurious separation patterns often observed behind slat brackets in RANS solutions for high-lift configurations at high angles of attack. We are mainly focusing on RANS solutions for Test Case 1 (TC1) configuration, but plan to ally the lessons learned during this study to improve RANS solutions for Test Case 2 (TC2) configurations. See links to the geometry description and organizing committee provided grids below.
+Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). This group explores RANS solutions for high-lift configurations, focusing on accuracy, iterative and grid convergence, and turbulence modeling for industrial applications. The specific goal of the HLPW6 RANS TFG is to understand and mitigate spurious separation patterns often observed behind slat brackets in RANS solutions for high-lift configurations at high angles of attack. We are mainly focusing on RANS solutions for Test Case 1 (TC1) configuration, but plan to apply the lessons learned during this study to improve RANS solutions for Test Case 2 (TC2) configurations. See links to the geometry description and organizing committee provided grids below.
 
 ## Join the TFG Distribution List
 - Email: [boris.diskin@nasa.gov](mailto:boris.diskin@nasa.gov) or [mike@flexcompute.com](mailto:mike@flexcompute.com)
@@ -71,7 +71,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - RANS grids are available — [https://aiaa-hlpw.org/HLPW6/grids](https://aiaa-hlpw.org/HLPW6/grids)
 
 ## Presentations from Bi-Weekly TFG Meetings
-- TFG Meeting 3: 2/25/26 [Presentation 1](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HeldenMesh_HLPW6_RANS_Case1_Brackets_B_0225_2026.pdf) [Presentation 2](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/presentation-share.pdf)
+- TFG Meeting 3: 2/25/26 [Presentation 1](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/presentation-share.pdf) [Presentation 2](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HeldenMesh_HLPW6_RANS_Case1_Brackets_B_0225_2026.pdf)
 - TFG Meeting 2: 2/11/26 [Presentation 1](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HeldenMesh_HLPW6_RANS_Case1B_0211_2026.pdf)  
 - [Kickoff Meeting: 1/28/26](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/RANS+TFG+20260128_v2.pdf)
 
