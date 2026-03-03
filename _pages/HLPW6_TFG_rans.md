@@ -77,7 +77,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 ## HLPW6 Website
 - Main site: [https://aiaa-hlpw.org/](https://aiaa-hlpw.org/)
 - Cases page: [https://aiaa-hlpw.org/HLPW6/cases](https://aiaa-hlpw.org/HLPW6/cases)
-- This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_RANS)
+- This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_RANS](https://aiaa-hlpw.org/HLPW6/TFG_RANS)
 
 ---
 Last updated: 2026-03-02
