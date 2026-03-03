@@ -13,9 +13,8 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - Email: [boris.diskin@nasa.gov](mailto:boris.diskin@nasa.gov) or [mike@flexcompute.com](mailto:mike@flexcompute.com)
 
 ## Meeting Schedule and Access
-- Bi-weekly on Tuesdays at 10:00 am EDT (EST between November 1, 2026 and March 13, 2027) 
-- Meeting link (Teams):  
-  [RANS TFG biweekly meeting](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fmeet%2F25656796098352%3Fp%3Dhoi7KqCHwWAWF8TBCI%26anon%3Dtrue&type=meet&deeplinkId=c9438561-703d-4acc-9fc8-d77df126eff4&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
+- Bi-weekly on Wednesday at 10:00 am EDT (EST between November 1, 2026 and March 13, 2027) 
+- [Meeting link (Teams)](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fmeet%2F25656796098352%3Fp%3Dhoi7KqCHwWAWF8TBCI%26anon%3Dtrue&type=meet&deeplinkId=c9438561-703d-4acc-9fc8-d77df126eff4&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
 
 ## Group Leadership
 - Boris Diskin— NASA’s Langley Research Center  
@@ -78,7 +77,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 ## HLPW6 Website
 - Main site: [https://aiaa-hlpw.org/](https://aiaa-hlpw.org/)
 - Cases page: [https://aiaa-hlpw.org/HLPW6/cases](https://aiaa-hlpw.org/HLPW6/cases)
-- This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
+- This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_RANS)
 
 ---
 Last updated: 2026-03-02
