@@ -19,9 +19,9 @@ nav: false
 [R.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_04)  Pointwise grid family (HexIsoTet F2)
 
 ### High Order
-[HO.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_01) Pointwise quadratic grid family
+[HO.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_01) Pointwise quadratic grid family (intended for RANS)
 
-[HO.1.TC1.02](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_02) BSC All Tet Q2 grid
+[HO.1.TC1.02](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_02) BSC All Tet Q2 grid (intended for WM-LES)
 
 ---
 
