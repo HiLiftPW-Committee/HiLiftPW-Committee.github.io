@@ -52,7 +52,7 @@ View_3_flap  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view3.l
 
 
 ## Postprocessing: Mean Surface Pressures and Skin Friction Extraction
-The surface data are to be extracted along several pressure rows, which are defined using hte equation Ax + By + C = D. The definitions of these planes are contained in this spreadsheet, and shown graphically below.
+The surface data are to be extracted along several pressure rows, which are defined using hte equation Ax + By + C = D. The definitions of these planes are contained in [this spreadsheet](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Pressure_Rows.xlsx), and shown graphically below.
 
 The first figure shows the basic layout of the chordwise rows. On the wing and slat, there are 7 pressure rows defined, WA through WG, and SA through SG. Each pressure row is defined by a single plane. Note that, when deployed, the pressure tap rows on the slat are not aligned with the wing (they are aligned only when stowed). The deployed flaps only have 3 rows defined, FA through FC. 
 
