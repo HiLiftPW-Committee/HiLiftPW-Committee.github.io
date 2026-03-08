@@ -24,6 +24,7 @@ Contours of surface skin friction coefficient are also very useful to plot (see 
   <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/wingCF.png" style="width: 40%;" alt="Wing Skin Friction">
 </div>
 
+
 In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](https://aiaa-hlpw.org/assets/HLPW6/tc1/cfmap_tecplot.map), and the table below. The recommended range (shown in the figure) is 0 to 0.015, step 0.001 (banded). In the Cf plot, the "lighting" has been turned off; this reduces the 3-dimensional appearance of the objects, but it improves the interpretability of the colors. If everyone removes lighting and follows the color scheme and range detailed here, then the resulting CFD plots should be reasonably easy to compare directly with one another.
 
 | LEVEL |	R   |	G   |	B   |
@@ -34,19 +35,26 @@ In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](h
 | 0.75  | 255 | 0   | 64  |
 | 1.00  | 255 | 255 | 255 |
 
+
 For direct CFD comparisons, three required views are shown below. In Tecplot, the "use perspective" feature is not turned on for any views. Tecplot Layout files are additionaly provided for participants to reproduce the exact views. If additional definition is needed, please reach out to your TFG leads.
 
 View_1_wing  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view1.lay)
+
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view1_wing.png" style="width: 50%;" alt="View 1">
 
 View_2_slat  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view2.lay)
+
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view2_slat.png" style="width: 50%;" alt="View 2">
 
 View_3_flap  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view3.lay)
+
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view3_flap.png" style="width: 50%;" alt="View 3">
 
+
 ## Postprocessing: Mean Surface Pressures and Skin Friction Extraction
-The surface data are to be extracted along several stations. The following figure shows the basic layout. On the wing and slat, there are 7 pressure rows defined, WA through WG, and SA through SG. Each pressure row is defined by a single plane. Note that, when deployed, the pressure tap rows on the slat are not aligned with the wing (they are aligned only when stowed). The deployed flaps only have 3 rows defined, FA through FC. 
+The surface data are to be extracted along several pressure rows, which are defined using hte equation Ax + By + C = D. The definitions of these planes are contained in this spreadsheet, and shown graphically below.
+
+The first figure shows the basic layout of the chordwise rows. On the wing and slat, there are 7 pressure rows defined, WA through WG, and SA through SG. Each pressure row is defined by a single plane. Note that, when deployed, the pressure tap rows on the slat are not aligned with the wing (they are aligned only when stowed). The deployed flaps only have 3 rows defined, FA through FC. 
 
 ![](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Belts_Chordwise_Labeled.png)
 
@@ -54,4 +62,4 @@ Additionally, there are 6 spanwise pressure rows defined over the wing, WSA thro
 
 ![](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Belts_Spanwise_labeled.png)
 
-Pressure rows are defined as planes, using the equation Ax + By + C = D. The definitions of these planes are contained in this spreadsheet.
+
