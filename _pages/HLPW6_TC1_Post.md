@@ -9,17 +9,20 @@ nav: false
 ## Data Submittal Forms
 HLPW6 will utilize Github for data submittal. It will be up to the participant to upload their data to the Git Repository.
 
-[HLPW Github Page](https://github.com/High-Lift-Prediction-Workshop)
-
-Instructions for Uploading Data
-
-Detailed Instructions for Preparing Data Submittal Forms
+* [HLPW Github Page](https://github.com/High-Lift-Prediction-Workshop)
+* Instructions for Uploading Data
+* Detailed Instructions for Preparing Data Submittal Forms
 
 ## Post Processing: Upper Surface Streamlines and Skin Friction Coefficient (Cf) Contours
  Postprocessing: Upper Surface Streamlines and Skin Friction Coefficient (Cf) Contours
 A major set of desired inputs from the CFD are computed surface streamlines, for qualitative comparison between datasets. This is particularly important for ascertaining the agreement/disagreement with regions of separation and other flow features of interest. Below is an example surface streamline plot, showing typical areas of interest for HLPW-4. There are many methods available for obtaining postprocessed surface streamline patterns; at this time, participants are encouraged to make use of the best tools at their disposal. 
 
 Contours of surface skin friction coefficient are also very useful to plot (see second figure immediately below). We are requesting plots of total skin friction (tau_w/freestream dynamic pressure), not plots of its x-component. Note that the definition of tau_w is standard: see, e.g., [Wall Shear Stress Definition](https://www.cfd-online.com/Wiki/Wall_shear_stress), with the derivative of the flow velocity parallel to the wall used in the equation. Within the Scale Resolving TFG, both temporally averaged and instantaneous skin friction plots are requested.
+
+<div style="display: flex; gap: 10px;">
+  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/wingCF.png" style="width: 40%;" alt="Wing Streamlines">
+  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/wingCF.png" style="width: 40%;" alt="Wing Skin Friction">
+</div>
 
 In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](https://aiaa-hlpw.org/assets/HLPW6/tc1/cfmap_tecplot.map), and the table below. The recommended range (shown in the figure) is 0 to 0.015, step 0.001 (banded). In the Cf plot, the "lighting" has been turned off; this reduces the 3-dimensional appearance of the objects, but it improves the interpretability of the colors. If everyone removes lighting and follows the color scheme and range detailed here, then the resulting CFD plots should be reasonably easy to compare directly with one another.
 
@@ -34,13 +37,13 @@ In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](h
 For direct CFD comparisons, three required views are shown below. In Tecplot, the "use perspective" feature is not turned on for any views. Tecplot Layout files are additionaly provided for participants to reproduce the exact views. If additional definition is needed, please reach out to your TFG leads.
 
 View_1_wing  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view1.lay)
-![](https://aiaa-hlpw.org/assets/HLPW6/tc1/view1_wing.png)
+<img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view1_wing.png" style="width: 50%;" alt="View 1">
 
 View_2_slat  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view2.lay)
-![](https://aiaa-hlpw.org/assets/HLPW6/tc1/view2_slat.png)
+<img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view2_slat.png" style="width: 50%;" alt="View 2">
 
 View_3_flap  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view3.lay)
-![](https://aiaa-hlpw.org/assets/HLPW6/tc1/view3_flap.png)
+<img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view3_flap.png" style="width: 50%;" alt="View 3">
 
 ## Postprocessing: Mean Surface Pressures and Skin Friction Extraction
 The surface data are to be extracted along several stations. The following figure shows the basic layout. On the wing and slat, there are 7 pressure rows defined, WA through WG, and SA through SG. Each pressure row is defined by a single plane. Note that, when deployed, the pressure tap rows on the slat are not aligned with the wing (they are aligned only when stowed). The deployed flaps only have 3 rows defined, FA through FC. 
