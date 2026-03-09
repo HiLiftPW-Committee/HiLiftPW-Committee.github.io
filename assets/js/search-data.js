@@ -143,6 +143,9 @@ ninja.data = [{
           section: "News",},{id: "news-many-updates-across-website-there-are-new-pages-for-each-tfg-with-content-slowly-being-added-our-first-families-of-grids-published-on-the-hlpw6-grids-page-and-a-more-complete-and-searchable-publications-list",
           title: 'Many updates across website. There are new pages for each TFG, with content...',
           description: "",
+          section: "News",},{id: "news-added-post-processing-information-for-hlpw6-test-case-1",
+          title: 'Added post processing information for HLPW6 Test Case 1.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
