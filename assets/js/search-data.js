@@ -146,6 +146,9 @@ ninja.data = [{
           section: "News",},{id: "news-added-post-processing-information-for-hlpw6-test-case-1",
           title: 'Added post processing information for HLPW6 Test Case 1.',
           description: "",
+          section: "News",},{id: "news-added-hrles-grid-family-h-1-tc1-01",
+          title: 'Added HRLES Grid Family H.1.TC1.01.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
