@@ -25,6 +25,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - Test Case 1 — CRM-HLS (Simplified High-Lift Common Research Model)
 - Test Case 2 — ONERA LRM 2.3 or 2.4 (the HLPW-5 configurations)
 - Test Case 3 (Optional) — CRM-HL Take-off Configuration
+- SST-Vm Verification Case: [model and test case descriptions](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Verification+Case+for+SST_Vm+model.pdf)
 
 ## Schedule and Milestones
 - Mini-Workshop 1: AIAA Aviation 2026 (8–12 June, San Diego, CA)  
