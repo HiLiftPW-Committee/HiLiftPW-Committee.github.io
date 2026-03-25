@@ -149,6 +149,9 @@ ninja.data = [{
           section: "News",},{id: "news-added-hrles-grid-family-h-1-tc1-01",
           title: 'Added HRLES Grid Family H.1.TC1.01.',
           description: "",
+          section: "News",},{id: "news-updated-tc1-post-processing-information-including-two-new-views-and-a-single-tecplot-layout-that-captures-all-requirements",
+          title: 'Updated TC1 Post Processing information, including two new views, and a single Tecplot...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
