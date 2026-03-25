@@ -35,19 +35,31 @@ In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](h
 | 0.75  | 255 | 0   | 64  |
 | 1.00  | 255 | 255 | 255 |
 
-For direct CFD comparisons, three required views are shown below. In Tecplot, the "use perspective" feature is not turned on for any views. Tecplot Layout files are additionaly provided for participants to reproduce the exact views. If additional definition is needed, please reach out to your TFG leads.
+For direct CFD comparisons, five required views are shown below. In Tecplot, the "use perspective" feature is not turned on for any views. 
 
-View_1_wing  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view1.lay)
+A single [Tecplot Layout file is included](https://aiaa-hlpw.org/assets/HLPW6/tc1/HLPW6_TC1.lay), which captures the views, the colormap settings, and streamlines. The different views are accessible through the pages feature of Tecplot, while Streamlines should be enabled for the streamlines view.
+
+The views are captured in the .lay file, but If additional definition is needed please reach out to your TFG leads.
+
+VIEW_1_WING
 
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view1_wing.png" style="width: 50%;" alt="View 1">
 
-View_2_slat  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view2.lay)
+VIEW_2_SLAT
 
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view2_slat.png" style="width: 50%;" alt="View 2">
 
-View_3_flap  [Tecplot Layout](https://aiaa-hlpw.org/assets/HLPW6/tc1/tc1_view3.lay)
+VIEW_3_FLAP
 
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/view3_flap.png" style="width: 50%;" alt="View 3">
+
+VIEW_4_B2_TOP  (Bracket #2, Top)
+
+<img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW4_B2_TOP.png" style="width: 50%;" alt="View 4">
+
+VIEW_5_B2_BOT (Bracket #2, Top)
+
+<img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW5_B2_BOT.png" style="width: 50%;" alt="View 5">
 
 
 ## Postprocessing: Mean Surface Pressures and Skin Friction Extraction
