@@ -25,7 +25,7 @@ Contours of surface skin friction coefficient are also very useful to plot (see 
 </div>
 
 
-In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](https://aiaa-hlpw.org/assets/HLPW6/tc1/cfmap_tecplot.map), and the table below. The range is 0 to 0.015, step 0.001 (banded). In the Cf plots, the "lighting" should be turned off.
+In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](https://aiaa-hlpw.org/assets/HLPW6/tc1/cfmap_tecplot.map), and the table below. The range is 0 to 0.02, step 0.002 (banded). In the Cf plots, the "lighting" should be turned off.
 
 | LEVEL |	R   |	G   |	B   |
 | ----- | --- | --- | --- |
@@ -37,7 +37,7 @@ In the second figure, the Tecplot color map is provided as [cfmap_tecplot.map](h
 
 For direct CFD comparisons, five required views are shown below. In Tecplot, the "use perspective" feature is not turned on for any views. 
 
-A single [Tecplot Layout file is included](https://aiaa-hlpw.org/assets/HLPW6/tc1/HLPW6_TC1.lay), which captures the views, the colormap settings, and streamlines. The different views are accessible through the pages feature of Tecplot, while Streamlines should be enabled for the streamlines view.
+A single [Tecplot Layout file is included](https://aiaa-hlpw.org/assets/HLPW6/tc1/HLPW6_TC1.lay), which captures the views, the colormap settings, and streamlines. The different views are accessible through the pages feature of Tecplot. Note that Streamtraces should be enabled for the streamlines image, but disabled for the Skin Friction image.
 
 The views are captured in the .lay file, but If additional definition is needed please reach out to your TFG leads.
 
