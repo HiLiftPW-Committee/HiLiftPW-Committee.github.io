@@ -20,8 +20,8 @@ A major set of desired inputs from the CFD are computed surface streamlines, for
 Contours of surface skin friction coefficient are also very useful to plot (see second figure immediately below). We are requesting plots of skin friction magnitude (tau_w/freestream dynamic pressure), not plots of its x-component. Note that the definition of tau_w is standard: see, e.g., [Wall Shear Stress Definition](https://www.cfd-online.com/Wiki/Wall_shear_stress), with the derivative of the flow velocity parallel to the wall used in the equation. Within the Scale Resolving TFG, both temporally averaged and instantaneous skin friction plots are requested.
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/wing_streamlines.png" style="width: 40%;" alt="Wing Streamlines">
-  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/wingCF.png" style="width: 40%;" alt="Wing Skin Friction">
+  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW1_Str.png" style="width: 40%;" alt="Wing Streamlines">
+  <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW1_Cf.png" style="width: 40%;" alt="Wing Skin Friction">
 </div>
 
 
