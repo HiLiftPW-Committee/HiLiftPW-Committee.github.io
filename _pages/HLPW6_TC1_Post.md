@@ -10,7 +10,8 @@ nav: false
 HLPW6 will utilize Github for data submittal. It will be up to the participant to upload their data to the Git Repository.
 
 * [HLPW Github Page](https://github.com/High-Lift-Prediction-Workshop)
-* Instructions for Uploading Data
+* [Test Case 1 Submission Repo](https://github.com/High-Lift-Prediction-Workshop/HLPW6-TC1)
+* [Instructions for Uploading Data](https://github.com/HiLiftPW-Committee/HiLiftPW-Committee.github.io/blob/main/assets/HLPW6/HLPW6-GitHub-InstructionsRevA.pdf) 
 * Detailed Instructions for Preparing Data Submittal Forms
 
 ## Post Processing: Upper Surface Streamlines and Skin Friction Coefficient (Cf) Contours
