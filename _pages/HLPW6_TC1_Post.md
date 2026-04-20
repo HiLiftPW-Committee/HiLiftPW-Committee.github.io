@@ -7,13 +7,8 @@ nav: false
 
 # Test Case 1 Post Processing Information
 ## Data Submittal Forms
-HLPW6 will utilize Github for data submittal. It will be up to the participant to upload their data to the Git Repository.
-
-* [HLPW Github Page](https://github.com/High-Lift-Prediction-Workshop)
-* [Test Case 1 Submission Repo](https://github.com/High-Lift-Prediction-Workshop/HLPW6-TC1)
-* [Instructions for Uploading Data](https://github.com/HiLiftPW-Committee/HiLiftPW-Committee.github.io/blob/main/assets/HLPW6/HLPW6-GitHub-InstructionsRevA.pdf)
-* <a href="https://github.com/HiLiftPW-Committee/HiLiftPW-Committee.github.io/blob/main/assets/HLPW6/HLPW6-GitHub-InstructionsRevA.pdf" target="_blank" type="application/pdf">View My PDF</a>
-* Detailed Instructions for Preparing Data Submittal Forms
+HLPW6 is utilizing Github for submission of data files. The [HLPW6 TC1 submission repo](https://github.com/High-Lift-Prediction-Workshop/HLPW6-TC1) provides details on the files desired for submission. Some details on flow and surface visualization are provided below.
+Participants are requested to create a "fork" of the repository and generate merge requests for data upload. A detailed description of this methodology is provided [here](https://aiaa-hlpw.org/assets/HLPW6/HLPW6-GitHub-InstructionsRevA.pdf).
 
 ## Post Processing: Upper Surface Streamlines and Skin Friction Coefficient (Cf) Contours
  Postprocessing: Upper Surface Streamlines and Skin Friction Coefficient (Cf) Contours
