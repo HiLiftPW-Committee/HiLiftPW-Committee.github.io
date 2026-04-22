@@ -58,7 +58,7 @@ VIEW_5_B2_BOT (Bracket #2, Top)
 
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW5_B2_BOT.png" style="width: 50%;" alt="View 5">
 
-In addition to the five views described above, a supplementary view is requested to visualize off-surface flow physics related to outboard separation. This additional view utilizes volume cuts combined with the Q-criterion (either provided directly by the CFD solver or obtained via Tecplot as a postprocessing step) to illustrate the development and trajectory of slat-bracket vortices. A set of Tecplot macros can be downloaded [here](https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/View6_TC1.zip) defining the view, volume cuts, and output variables (i.e., surface skin friction on the wing and Q-criterion on the volume cuts). Apply the inclusive macro (000_all.mcr) after surface boundary and volume data are uploaded to Tecplot with the grid system in inches.
+View 6 is used to visualize off-surface flow physics in the wake of slat brackets. This view utilizes volume cuts combined with the Q-criterion (either provided directly by the CFD solver or obtained via Tecplot as a postprocessing step) to illustrate the development and trajectory of vortices. A set of Tecplot macros can be downloaded [here](https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/View6_TC1.zip) defining the view, volume cuts, and output variables (i.e., surface skin friction on the wing and Q-criterion on the volume cuts). To generate the view, upload the surface boundary and volume data to Tecplot with the grid system in inches and then apply the macro 000_all.mcr.
 
 VIEW_6_SLAT_BRACKET_WAKES
 
