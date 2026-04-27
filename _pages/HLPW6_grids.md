@@ -18,7 +18,7 @@ nav: false
 
 [R.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_R1TC1_04)  Pointwise grid family (HexIsoTet F2)
 
-## RANS (Special Consideration)
+### RANS (Special Consideration)
 [R.1.TC1NoBrk.01](https://aiaa-hlpw.org/HLPW6/grids_R1TC1NoSBrk) HeldenMesh fixed grid family for configuration with no slat brackets
 
 ### High Order
