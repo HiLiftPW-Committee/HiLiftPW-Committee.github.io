@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /HLPW6/grids_R1TC1NoSBrk_01
+permalink: /HLPW6/grids_R1TC1NoSBrk
 title: HLPW6 Grid Family R.1.TC1NoSBrk.01
 nav: false
 ---
