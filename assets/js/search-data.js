@@ -152,6 +152,9 @@ ninja.data = [{
           section: "News",},{id: "news-updated-tc1-post-processing-information-including-two-new-views-and-a-single-tecplot-layout-that-captures-all-requirements",
           title: 'Updated TC1 Post Processing information, including two new views, and a single Tecplot...',
           description: "",
+          section: "News",},{id: "news-submission-github-page-for-test-case-1-has-been-publicly-launched-further-instructions-for-submission-creating-your-own-branch-are-included-here",
+          title: 'Submission github page for Test Case 1 has been publicly launched! Further instructions...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
