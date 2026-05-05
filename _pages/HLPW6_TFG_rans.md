@@ -27,7 +27,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - Test Case 2 — ONERA LRM 2.3 or 2.4 (the HLPW-5 configurations)
 - Test Case 3 (Optional) — CRM-HL Take-off Configuration
 - SST-Vm Verification Case: [model and test case descriptions](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Verification+Case+for+SST_Vm+model.pdf)
--  [Iterative convergence criteria](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/ICC_and_GCC.pdf)
+-  [Iterative and grid convergence criteria](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/ICC_and_GCC.pdf)
 
 ## Schedule and Milestones
 - Mini-Workshop 1: AIAA Aviation 2026 (8–12 June, San Diego, CA)  
@@ -73,7 +73,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - RANS grids are available — [https://aiaa-hlpw.org/HLPW6/grids](https://aiaa-hlpw.org/HLPW6/grids)
 
 ## Presentations from Bi-Weekly TFG Meetings
-- TFG Meeting 4/21/26 Presentations [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HLPW6_Update_DLR_042226.pdf) [02](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Embraer_HLPW6_TC1_RANSMeeting_220426.pdf)
+- TFG Meeting 4/22/26 Presentations [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HLPW6_Update_DLR_042226.pdf) [02](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Embraer_HLPW6_TC1_RANSMeeting_220426.pdf)
 - TFG Meeting 4/8/26 Presentations [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HLPW6_DLR_04082026.pdf) 02 (need approval for release)
 - TFG Meeting 3/25/26 Presentation [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/JAXA_vis1_0325_2026.pdf)
 - TFG Meeting 3/11/26 Presentation [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Embraer_HLPW6_TC1_SRSMeeting_100326.pdf)
