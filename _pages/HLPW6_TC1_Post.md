@@ -58,11 +58,24 @@ VIEW_5_B2_BOT (Bracket #2, Top)
 
 <img src="https://aiaa-hlpw.org/assets/HLPW6/tc1/VIEW5_B2_BOT.png" style="width: 50%;" alt="View 5">
 
-View 6 is used to visualize off-surface flow physics in the wake of slat brackets. This view utilizes volume cuts combined with the Q-criterion (either provided directly by the CFD solver or obtained via Tecplot as a postprocessing step) to illustrate the development and trajectory of vortices. A set of Tecplot macros can be downloaded [here](https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/View6_TC1.zip) defining the view, volume cuts, and output variables (i.e., surface skin friction on the wing and Q-criterion on the volume cuts). To generate the view, upload the surface boundary and volume data to Tecplot with the grid system in inches and then apply the macro 000_all.mcr.
+Views 6a-c visualize the wake of the slat brackets. Views 6a, 6b, and 6c display the x, y, and z components of the vorticity vector, respectively. Surface skin-friction coefficient contours are also shown on the wing. The vorticity vector within the cut planes can be provided directly by the CFD solver or processed within Tecplot.
 
-VIEW_6_SLAT_BRACKET_WAKES
+A set of Tecplot macros is available for [download](https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/view6_tc1_v2.zip). These macros define the views, volume cuts, and output variables (such as the skin-friction coefficient on the wing and vorticity on the volume cuts). Each view combines 11 cut planes; for reference, these volume cut planes are defined in 140_XXX_aoaYYY_q_view03-03.slice1.mcr within the package. To generate the views, follow these steps:
 
-<img src="https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/view6_sample.png" style="width: 50%;" alt="View 6">
+  1. Load the surface boundary and volume data into Tecplot, ensuring the grid system is in inches.
+  2. Nondimensionalize the vorticity components (named “Vort x”, “Vort y”, and “Vort z”) and the vorticity magnitude (named “Vort mag”) by multiplying them by the ratio MAC/a, where MAC is the mean aerodynamic chord and a is the freestream speed of sound.
+  3. Ensure that the skin-friction coefficient variable is named “Cf”.
+  4. Run the main Tecplot macro, 000_all.mcr, from the downloaded package.
+
+This macro is expected to generate three PNG files in your run directory (sample figures are shown below for an angle of attack of 10 degrees). Note that to make all cut planes visible, the nondimensional vorticity magnitude is blanked for values of 0.5 or less. For scale-resolving simulations, it is recommended to output the vorticity components and magnitude for the time-averaged flow.
+
+VIEW_6a/b/c_SLAT_BRACKET_WAKES
+
+<div style="display: flex; gap: 10px;">
+  <img src="https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/view6a_vortx.png" style="width: 33%;" alt="X component vorticity">
+  <img src="https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/view6b_vorty.png" style="width: 33%;" alt="Y component vorticity">
+  <img src="https://hlpw6.s3.us-east-1.amazonaws.com/website/TC1_Postprocessing/view6c_vortz.png" style="width: 33%;" alt="Z component vorticity">
+</div>
 
 ## Postprocessing: Mean Surface Pressures and Skin Friction Extraction
 The surface data are to be extracted along several pressure rows, which are defined using the equation Ax + By + C = D. The definitions of these planes are contained in [this spreadsheet](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Pressure_Rows.xlsx), and shown graphically below.
