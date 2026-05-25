@@ -69,7 +69,7 @@ A set of Tecplot macros is available for [download](https://hlpw6.s3.us-east-1.a
 
 This macro is expected to generate three PNG files in your run directory (sample figures are shown below for an angle of attack of 10 degrees). Note that to make all cut planes visible, the nondimensional vorticity magnitude is blanked for values of 0.5 or less. For scale-resolving simulations, it is recommended to output the vorticity components and magnitude for the time-averaged flow.
 
-Here is additional information about the setup: set a non-perspective (orthographic) camera with a 30-unit wide field; position the view at coordinates (X: 22338.8, Y: -16757.7, Z: 42984); and set the yaw (psi), pitch (theta), and roll (alpha) to 33, -53, and 0 degrees, respectively. Each cutting plane is defined by the uniform normal vector [0.796715, -0.604356, 0.0] and the following origin points (all coordinates are in inches):<br>
+Here is additional information about the setup: set a non-perspective (orthographic) camera with a 30-unit wide field; position the view at coordinates (X: 22338.8, Y: -16757.7, Z: 42984); and set the PSIAngle (about x-axis) and ThetaAngle (about z-axis) to 33 and -53 degrees, respectively. Each cutting plane is defined by the uniform normal vector [0.796715, -0.604356, 0.0] and the following origin points (all coordinates are in inches):<br>
  * Plane 1  X = 33.60, Y = 41.8497, Z = 5.5123
  * Plane 2: X = 36.24, Y = 41.8497, Z = 5.5123
  * Plane 3: X = 38.88, Y = 41.8497, Z = 5.5123
