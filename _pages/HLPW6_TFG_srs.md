@@ -64,14 +64,13 @@ Presenter slide sharing:
 4. What grid distribution/topology/density choices are required for accurate high-lift predictions? What are the implications for near-wall grid size for different SRS methods (e.g., WMLES/HRLES running at y+ in the log layer)?
 
 ### Test Case Specific
-- TC1 (CRM-HLS, Jan–May 2026):  
+- TC1 (Current Focus, CRM-HLS):  
   Can SRS methods provide a high-fidelity reference solution set, including solutions on highly resolved meshes (potentially WRLES/DNS)?
-- TC1/TC2.1 (HLPW5 TC2.3/4, 3–4 AoAs near stall, Jun 2026–Jan 2027):  
+- TC2 (Planned, HLPW5 TC2.4):  
   How should SRS methods handle laminar–turbulent transition, especially on the slat? How can the predicted leading-edge boundary layer state be validated (e.g., using experimental or DNS/WRLES data)?
-- TC2.2 (HLPW5 TC2.3/4, 3 AoAs in linear CL range, Jun 2026–Jan 2027):  
-  How can we improve accuracy at low angles of attack, where flap separation misprediction often leads to large lift errors?
-- TC3 (likely ONERA takeoff config, Feb–May 2027):  
-  Can SRS methods reliably predict aircraft drag at low angle of attack?
+  How can SRS accuracy be improved at low angles of attack, where flap separation misprediction often leads to large lift errors?
+- TC3 (Tentative, ONERA LRM takeoff configuration):  
+  Can SRS methods reliably predict drag at low angle of attack for an aircraft in takeoff configuration?
 
 ## Test Case 1: CRM-HLS Overview
 - Simplified high-lift configuration developed via Boeing/University of Washington collaboration
