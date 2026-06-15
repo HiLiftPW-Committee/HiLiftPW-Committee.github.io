@@ -5,7 +5,7 @@ title: HLPW6 Scale-Resolving Simulations TFG
 nav: false
 ---
 
-# HLPW6: Scale-Resolving Simulations (SRS) Technical Focus Group
+# HLPW6: Scale-Resolving Simulation (SRS) Technical Focus Group
 
 Welcome to the SRS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). This group explores scale-resolving CFD methods (including WMLES and HRLES) for high-lift configurations, focusing on accuracy, affordability, grid requirements, and turbulence modeling for industrial applications.
 
