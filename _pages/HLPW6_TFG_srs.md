@@ -28,17 +28,17 @@ Welcome to the SRS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). Th
 - Daniel Heathcote — Aurora Flight Sciences (Deputy Leader)
 
 ## Schedule and Milestones
-- Test Case 1 — CRM-HLS: January to May 2026  
+- Test Case 1 (Current Focus) — CRM-HLS  
   Case hub: [https://aiaa-hlpw.org/HLPW6/cases](https://aiaa-hlpw.org/HLPW6/cases)  
   Looking for participants to run WRLES/DNS  
   Mini-Workshop 1: AIAA Aviation 2026 (8–12 June, San Diego, CA)  
-  Session time: 5:30 pm PDT, Room Harbor B (hybrid option planned)
 
-- Test Case 2 (TBD) — ONERA LRM 2.3 or 2.4: June 2026 to January 2027  
-  Focus: Laminar–turbulent transition on slat; flap lift overprediction  
+- Test Case 2 (Planned) — ONERA LRM
+  Full high-lift aircraft configuration, previous focus of HLPW5 TC2.4  
+  Focus: Laminar–turbulent transition on slat; flap lift overprediction, application of lessons learned on CRM-HLS to a complex config
   Mini-Workshop 2: AIAA SciTech 2027 (11–15 Jan, Orlando, FL)
 
-- Test Case 3 (Tentative) — CRM-HL Take-off Configuration: February 2027 to June 2027
+- Test Case 3 (Tentative) — CRM-HL Take-off Configuration
 
 - HLPW6: AIAA Aviation 2027 (7–11 June, San Diego, CA)
 
@@ -90,14 +90,10 @@ Presenter slide sharing:
 - Need grids to run on? Contact TFG leadership.
 - Note: Grid characteristics may differ between HRLES and WMLES; pay attention to gridding strategies appropriate for your selected method.
 
-## Presentations from Bi-Weekly TFG Meetings
-- [TFG Meeting 7: 4/21/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_04_21_HLPW6_SRS_TFG_Meeting.pdf)  
-- [TFG Meeting 6: 4/07/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_04_07_HLPW6_SRS_TFG_Meeting.pdf)  
-- [TFG Meeting 5: 3/24/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_03_24_HLPW6_SRS_TFG_Meeting.pdf)  
-- [TFG Meeting 4: 3/09/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_03_09_HLPW6_SRS_TFG_Meeting.pdf)  
-- [TFG Meeting 3: 2/24/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_02_24_HLPW6_SRS_TFG_Meeting.pdf)  
-- [TFG Meeting 2: 2/10/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_02_10_HLPW6_SRS_TFG_Meeting.pdf)  
-- [Kickoff Meeting: 1/27/26](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_01_27_HLPW6_SRS_TFG_Kickoff.pdf)
+## SRS TFG Presentations
+- [Mini-Workshop 1 Summary Presentation](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_06_11_HLPW6_SRS_TFG_MiniWorkshop1_Summary.pdf)  
+- [Recent TFG Meeting Slides](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_04_21_HLPW6_SRS_TFG_Meeting.pdf)  
+- [Kickoff Meeting](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_01_27_HLPW6_SRS_TFG_Kickoff.pdf)
 
 ## HLPW6 Website
 - Main site: [https://aiaa-hlpw.org/](https://aiaa-hlpw.org/)
@@ -105,4 +101,4 @@ Presenter slide sharing:
 - This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
 
 ---
-Last updated: 2026-02-10
+Last updated: 2026-06-15
