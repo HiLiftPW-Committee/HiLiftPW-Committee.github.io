@@ -35,7 +35,7 @@ Welcome to the SRS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). Th
 
 - Test Case 2 (Planned) — ONERA LRM  
   Full high-lift aircraft configuration, previously used as HLPW5 TC2.4  
-  Focus: Laminar–turbulent transition on slat; flap lift overprediction, application of lessons learned on CRM-HLS to a more complex configuration  
+  Focus: Laminar–to-turbulent transition on the slat; flap lift overprediction; application of lessons learned on CRM-HLS to a more complex configuration  
   Mini-Workshop 2: AIAA SciTech 2027 (11–15 Jan, Orlando, FL)
 
 - Test Case 3 (Tentative) — CRM-HL Take-off Configuration
