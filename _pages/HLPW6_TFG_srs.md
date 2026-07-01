@@ -91,7 +91,7 @@ Presenter slide sharing:
 
 ## SRS TFG Presentations
 - [Mini-Workshop 1 Summary Presentation](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_06_11_HLPW6_SRS_TFG_MiniWorkshop1_Summary.pdf)  
-- [Recent TFG Meeting Slides](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_04_21_HLPW6_SRS_TFG_Meeting.pdf)  
+- [Recent TFG Meeting Slides](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_06_30_HLPW6_SRS_TFG_Meeting.pdf)  
 - [Kickoff Meeting](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_01_27_HLPW6_SRS_TFG_Kickoff.pdf)
 
 ## HLPW6 Website
