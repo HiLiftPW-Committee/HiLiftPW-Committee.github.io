@@ -100,4 +100,4 @@ Presenter slide sharing:
 - This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
 
 ---
-Last updated: 2026-06-15
+Last updated: 2026-07-01
