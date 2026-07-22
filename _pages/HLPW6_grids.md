@@ -28,6 +28,10 @@ nav: false
 
 [HO.1.TC1.03](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/H.1.TC1.WRLES.01/CDS_PW_TC1_F1_WRLES_Lvl-B_Q2.cgns.zip) Pointwise Q2 grid (intended for WR-LES)
 
+[HO.1.TC1.04](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_04) CENTAUR curved Q2 mesh, Unstructured
+
+[HO.1.TC1.05](https://aiaa-hlpw.org/HLPW6/grids_HO1TC1_05) CENTAUR curved Q2 mesh, Quad-Dominant
+
 ### HRLES
 [H.1.TC1.01](https://aiaa-hlpw.org/HLPW6/grids_H1TC1_01) Embraer's HRLES grid family generated with ANSA
 
