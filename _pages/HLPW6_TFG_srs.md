@@ -90,8 +90,8 @@ Presenter slide sharing:
 - Note: Grid characteristics may differ between HRLES and WMLES; pay attention to gridding strategies appropriate for your selected method.
 
 ## SRS TFG Presentations
+- [Recent TFG Meeting Slides](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_07_28_HLPW6_SRS_TFG_Meeting.pdf)  
 - [Mini-Workshop 1 Summary Presentation](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_06_11_HLPW6_SRS_TFG_MiniWorkshop1_Summary.pdf)  
-- [Recent TFG Meeting Slides](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_06_30_HLPW6_SRS_TFG_Meeting.pdf)  
 - [Kickoff Meeting](https://aiaa-hlpw.org/assets/HLPW6/SRS/26_01_27_HLPW6_SRS_TFG_Kickoff.pdf)
 
 ## HLPW6 Website
@@ -100,4 +100,4 @@ Presenter slide sharing:
 - This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
 
 ---
-Last updated: 2026-07-01
+Last updated: 2026-07-28
