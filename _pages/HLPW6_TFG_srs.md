@@ -49,7 +49,7 @@ Welcome to the SRS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). Th
 
 Presenter slide sharing:
 - Please include and share your presentation with:
-  - [heathcote.daniel@aurora.aero](mailto:heathcote.daniel@aurora.aero)
+  - [dan@flexcompute.com](mailto:dan@flexcompute.com)
   - [eduardo.molina@embraer.com.br](mailto:eduardo.molina@embraer.com.br)
   - [konrad.a.goc@boeing.com](mailto:konrad.a.goc@boeing.com)
 - Slides shared during the bi-weekly meetings will not be published outside the workshop.
@@ -100,4 +100,4 @@ Presenter slide sharing:
 - This TFG page: [https://aiaa-hlpw.org/HLPW6/TFG_SRS](https://aiaa-hlpw.org/HLPW6/TFG_SRS)
 
 ---
-Last updated: 2026-07-28
+Last updated: 2026-08-04
