@@ -25,7 +25,7 @@ Welcome to the SRS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). Th
 ## Group Leadership
 - Konrad Goc — Boeing (Co-Leader; emphasis on LES methods)
 - Eduardo Molina — Embraer (Co-Leader; emphasis on HRLES methods)
-- Daniel Heathcote — Aurora Flight Sciences (Deputy Leader)
+- Daniel Heathcote — Flexcompute (Deputy Leader)
 
 ## Schedule and Milestones
 - Test Case 1 (Current Focus) — CRM-HLS  
