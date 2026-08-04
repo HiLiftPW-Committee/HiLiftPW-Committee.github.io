@@ -101,4 +101,11 @@ Additionally, there are 6 spanwise pressure rows defined over the wing, WSA thro
 
 ![](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Belts_Spanwise_labeled.png)
 
+## Postprocessing: Scale resolving simulation (SRS)-requested Boundary Layer probes
+
+Boundary layer probes/rakes at several chord wise locations at span wise location B were requested by SRS TFG leadership. The intention of these probes is to investigate the variations of time-averaged velocity and pressure at a location where little-to-no separation is observed across the angle of attack range. The rakes are defined as two points, plus a normal vector in this [excel file](https://aiaa-hlpw.org/assets//HLPW6/tc1/HLPW6_TC1_BL_probes.xlsx). 
+
+
+
+
 
