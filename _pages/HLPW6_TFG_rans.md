@@ -73,6 +73,7 @@ Welcome to the RANS TFG page for AIAA High Lift Prediction Workshop 6 (HLPW6). T
 - RANS grids are available — [https://aiaa-hlpw.org/HLPW6/grids](https://aiaa-hlpw.org/HLPW6/grids)
 
 ## Presentations from Bi-Weekly TFG Meetings
+- TFG Meeting 8/26/26 Presentations: [Branch Naming](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/Branch+Naming+Convention.pdf) [ITU](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/HEMLAB_HLPW6_TC1_Expanded.pdf)
 - TFG Meeting 8/12/26 Presentation: [01](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/FUN3D_Helden_USM3D.pdf)
 - TFG Meeting 7/29/26 Presentation: [DLR](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/xRANS_v03.pdf)
 - TFG Meeting 7/15/26 Presentation: [KHI](https://hlpw6.s3.us-east-1.amazonaws.com/presentations/RANS_TFG/26KT013317_HLPW-6_CFD+Analysis+of+the+CRM-HL+Using+DynamicAngle-of-Attack+Sweep+(KHI)+2.pdf)
