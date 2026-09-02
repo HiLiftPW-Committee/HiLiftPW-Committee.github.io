@@ -32,10 +32,9 @@ The AIAA CFD High-Lift Prediction Workshop is a collaborative effort organized b
 
 ## Upcoming Events
 #### HLPW6 Mini-Workshop #2 at [AIAA SciTech Forum 2027](https://scitech.aiaa.org/)
-- January 2027 in Orlando, FL
+- January 13, 2027 in Orlando, FL
 - Hybrid option will be available, but in person attendance encouraged!
-- Planning on mid-week session.
-- Details and Dates to be announced when available
+- 1 - 3pm Eastern Time
   
 #### High-Lift Prediction Workshop 6 at [AIAA Aviation Forum 2027](https://aviation.aiaa.org/)
 - June 2027, in San Diego, CA
