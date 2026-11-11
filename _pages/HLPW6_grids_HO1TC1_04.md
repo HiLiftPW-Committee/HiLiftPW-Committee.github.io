@@ -10,9 +10,7 @@ CENTAUR curved Q2 meshes for the CRM_HLS_HLPW6_TC1 Case.
 
 Meshes:
 
-[CRM_HLS_HLPW6_TC1_UNSTRUCT_CENTAUR.cgns](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/HO.1.TC1.4/CRM_HLS_HLPW6_TC1_UNSTRUCT_CENTAUR.zip
-) 1.39 GB  [Readme](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/HO.1.TC1.4/Readme.txt
-)
+[CRM_HLS_HLPW6_TC1_UNSTRUCT_CENTAUR.cgns](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/HO.1.TC1.4/CRM_HLS_HLPW6_TC1_UNSTRUCT_CENTAUR.zip) 1.39 GB  [Readme](https://hlpw6.s3.us-east-1.amazonaws.com/grids/HighOrder/HO.1.TC1.4/Readme.txt)
 - Prism-Dominant Boundary Layer Mesh, Tetrahedra on the Farfield,Q2, #points: 26314130, #elements: 7631271
 
 These meshes were created with CENTAUR mesh generator (by CENTAURSOFT).
