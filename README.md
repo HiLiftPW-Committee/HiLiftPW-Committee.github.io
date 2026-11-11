@@ -1,6 +1,6 @@
 # High Lift Prediction Workshop
 
-Deployment: https://hiliftpw-committee.github.io/
+Deployment: https://aiaa-hlpw.org/
 
 ---
 Website is generated from alshedivat/al-folio
