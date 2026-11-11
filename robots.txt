@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://hiliftpw-committee.github.io/sitemap.xml
+Sitemap: http://aiaa-hlpw.org/sitemap.xml
