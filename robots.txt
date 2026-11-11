@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://aiaa-hlpw.org/sitemap.xml
+Sitemap: https://aiaa-hlpw.org/sitemap.xml
