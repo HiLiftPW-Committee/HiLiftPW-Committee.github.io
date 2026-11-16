@@ -47,7 +47,7 @@ Test Case 3 builds on TC1, and represents the CRM-HLS geometry as tested in the 
 
 ![CRM-HL Configuration Buildup](https://aiaa-hlpw.org/assets/HLPW6/tc3/tc3_glam.jpg)
 
-[Test Case Description Document](https://aiaa-hlpw.org/assets/HLPW6/HLPW6_Test_Case_3_v1.0.pdf)
+[Test Case Description Document](https://aiaa-hlpw.org/assets/HLPW6/tc3/HLPW6_Test_Case_3_v1.0.pdf)
 
 Test Case 3 Geometry, alpha 10deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a10.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a10.igs)
 
