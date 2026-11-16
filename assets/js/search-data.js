@@ -158,6 +158,9 @@ ninja.data = [{
           section: "News",},{id: "news-date-and-time-for-mini-workshop-2-finalized-and-posted-above-we-re-also-working-towards-having-an-experimental-version-of-test-case-1-available-by-the-end-of-september-this-will-feature-a-few-minor-changes-relative-to-tc1-such-as-bracket-shape-and-flap-support-structure-but-more-importantly-will-include-a-viscous-test-section-to-replicate-what-will-be-tested-at-university-of-washington-in-the-fall",
           title: 'Date and time for Mini-Workshop 2 finalized and posted above. We’re also working...',
           description: "",
+          section: "News",},{id: "news-hlpw6-test-case-3-details-are-posted-on-the-hlpw6-cases-page",
+          title: 'HLPW6 Test Case 3 details are posted on the HLPW6 Cases page!',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
