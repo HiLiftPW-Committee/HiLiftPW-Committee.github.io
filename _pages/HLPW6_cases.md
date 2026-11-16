@@ -16,6 +16,8 @@ This workshop will utilize different configurations of the High Lift Common Rese
 ## Required Test Cases
 Previous workshops designated test cases as either ‘Required’ or ‘Optional’ at the workshop level, with all TFGs working in parallell. In this workshop, ‘Required’ test cases are specified at the TFG level, with overlap between TFGs coordinated amongst leadership. While this provides less cross-TFG comparisons, it allows the TFGs to focus on their relevant issues and key questions. The required cases for this workshop will be considerably less than what was requested in HLPW-5.
 
+---
+
 # Test Case 1: CRM-HLS
 The CRM-HLS (Simplified High-Lift Common Research Model) test case is designed to replicate some of the flow physics seen on the outboard wing of the full CRM-HL, but in a more simplistic manner. The geometry consists of a constant sectional profile cut from the full configuration just outboard of the end of the flaps. Geometry includes the main element, a slat, a semi-span flap, and several slat brackets designed to match the size and locations of the full model. These sectional profiles are extruded and swept to form a finite span simplified swept wing. Specifically, this model is designed to replicate the over-predicted separation typical of RANS solver behind the outboard slat brackets.
 
@@ -41,6 +43,8 @@ This test case is available to assess the ability of CFD to predict the effect o
 [Test Case Description Document](https://aiaa-hlpw.org/assets/HLPW6/HLPW6_Test_Case_2_v1.0.pdf)
 
 [Test Case 2 Geometry](https://commonresearchmodel.larc.nasa.gov/high-lift-prediction-workshop-5-cad-files/)
+
+---
 
 # Test Case 3: CRM-HLS In-Tunnel Simulation
 Test Case 3 builds on TC1, and represents the CRM-HLS geometry as tested in the University of Washington Kirsten wind-tunnel in October 2026. It adds some geometric complexity to the base model including flap support fairings, modified slat brackets, and a fairing where the wing meets the wall. Additionally, this case includes a simplified version of the wind-tunnel walls and splitter plate setup featuring a constant area, partially viscous domain.
