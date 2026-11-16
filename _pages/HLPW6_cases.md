@@ -42,6 +42,27 @@ This test case is available to assess the ability of CFD to predict the effect o
 
 [Test Case 2 Geometry](https://commonresearchmodel.larc.nasa.gov/high-lift-prediction-workshop-5-cad-files/)
 
+# Test Case 3: CRM-HLS In-Tunnel Simulation
+Test Case 3 builds on TC1, and represents the CRM-HLS geometry as tested in the University of Washington Kirsten wind-tunnel in October 2026. It adds some geometric complexity to the base model including flap support fairings, modified slat brackets, and a fairing where the wing meets the wall. Additionally, this case includes a simplified version of the wind-tunnel walls and splitter plate setup featuring a constant area, partially viscous domain.
+
+![CRM-HL Configuration Buildup](https://aiaa-hlpw.org/assets/HLPW6/tc3/tc3_glam.jpg)
+
+[Test Case Description Document](https://aiaa-hlpw.org/assets/HLPW6/HLPW6_Test_Case_3_v1.0.pdf)
+
+Test Case 3 Geometry, alpha 10deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a10.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a10.igs)
+
+Test Case 3 Geometry, alpha 15deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a15.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a15.igs)
+
+Test Case 3 Geometry, alpha 20deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a20.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a20.igs)
+
+Test Case 3 Geometry, alpha 25deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a25.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a25.igs)
+
+Test Case 3 Geometry, alpha 30deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a30.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a30.igs)
+
+Test Case 3 Geometry, alpha 32deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a32.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a32.igs)
+
+Test Case 3 Geometry, alpha 35deg [stp](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a35.stp)  [igs](https://aiaa-hlpw.org/assets/HLPW6/tc3/CRM_HLS_TC3_a35.igs)
+
 # References
 1.	Lacy and Clark, “Definition of Initial Landing and Takeoff Reference Configurations for the High Lift Common Research Model (CRM-HL)”, AIAA-2020-2771, AIAA Aviation 2020 Forum, Virtual Event, June 2020.
 2.	Mouton, S., Charpentier, G., and Lorenski, A., “Test Summary of the Full-Span High-Lift Common Research Model at the ONERA F1 Pressurized Low-Speed Wind Tunnel,” AIAA-2023-0823, AIAA SciTech Forum, January 2023.
