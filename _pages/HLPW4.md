@@ -23,5 +23,5 @@ The website data include (among other details):
 Note: This page will eventually be expanded to more resemble the historical content.
 
 ### Related Links
-<a href="http://www.aiaa.org/">AIAA Home</a>
+<a href="https://www.aiaa.org/">AIAA Home</a>
 
