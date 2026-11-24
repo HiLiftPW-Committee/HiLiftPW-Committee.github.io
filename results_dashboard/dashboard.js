@@ -55,6 +55,16 @@
     WS: "Wing spanwise row",
     FS: "Flap spanwise row",
   };
+  const standardPressureBelts = [
+    ...["A", "B", "C", "D", "E", "F", "G"].map((row) => `chord:${row}`),
+    "WSA",
+    "WSB",
+    "WSC",
+    "WSD",
+    "WSE",
+    "WSF",
+    "FSF",
+  ];
 
   function setStatus(message, stateName) {
     status.textContent = message;
@@ -312,10 +322,6 @@
     return beltInfo[family] ? `${belt} — ${beltInfo[family]}` : belt;
   }
 
-  function beltGroupKey(belt) {
-    return /^[SWF][A-G]$/.test(belt) ? `chord:${belt.charAt(1)}` : belt;
-  }
-
   function beltMatchesSelection(belt, selection) {
     if (selection === "all") return true;
     if (selection.startsWith("chord:")) return ["S", "W", "F"].includes(belt.charAt(0)) && belt.charAt(1) === selection.charAt(6) && belt.length === 2;
@@ -330,14 +336,16 @@
     const selectedSeries = state.pressureSeries.filter(
       (item) => state.pressureSelected.has(item.fileId),
     );
-    const belts = [...new Set(selectedSeries.map((item) => beltGroupKey(item.belt)))].sort();
-    const aoaSeries = selectedSeries.filter((item) => beltMatchesSelection(item.belt, state.pressureBelt));
+    const aoaSource = selectedSeries.length ? selectedSeries : state.pressureSeries;
+    const aoaSeries = aoaSource.filter((item) => beltMatchesSelection(item.belt, state.pressureBelt));
     const aoas = [...new Set(aoaSeries.map((item) => item.aoa).filter((value) => value !== null))].sort(
       (a, b) => a - b,
     );
     pressureBelt.replaceChildren(new Option("All pressure belts", "all"));
-    belts.forEach((belt) => pressureBelt.add(new Option(beltGroupDescription(belt), belt)));
-    pressureBelt.value = belts.includes(state.pressureBelt) ? state.pressureBelt : "all";
+    standardPressureBelts.forEach((belt) => pressureBelt.add(new Option(beltGroupDescription(belt), belt)));
+    pressureBelt.value = standardPressureBelts.includes(state.pressureBelt)
+      ? state.pressureBelt
+      : "chord:A";
     pressureAoA.replaceChildren(new Option("All angles of attack", "all"));
     aoas.forEach((aoa) => pressureAoA.add(new Option(`${aoa}°`, String(aoa))));
     pressureAoA.value = aoas.map(String).includes(String(state.pressureAoA))
@@ -568,6 +576,12 @@
       setPressureStatus("Loading current CPCF files from GitHub…");
       state.pressureSeries = await loadPressureSeries();
       state.pressureLoaded = true;
+      state.pressureBelt = "chord:A";
+      const availableAoA = state.pressureSeries
+        .map((item) => item.aoa)
+        .filter((value) => value !== null)
+        .sort((a, b) => a - b);
+      state.pressureAoA = availableAoA[0] ?? "all";
       populatePressureOptions();
       renderPressureSubmissionList();
       renderPressureChart();
