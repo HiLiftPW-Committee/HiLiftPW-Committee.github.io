@@ -16,6 +16,13 @@
   const selectAll = dashboard.querySelector("[data-select-all]");
   const clearAll = dashboard.querySelector("[data-clear-all]");
   const state = { series: [], selected: new Set(), tfgSelected: new Set(["R", "S", "H", "A"]) };
+  const tfgLabels = {
+    R: "RANS TFG",
+    S: "Scale Resolving TFG",
+    H: "High Order TFG",
+    A: "AI/ML TFG",
+    U: "Unclassified",
+  };
   const tfgInfo = {
     R: "Reynolds-Averaged Navier–Stokes (RANS) and grid-adaptive TFG",
     S: "Scale-Resolving Simulation (SRS) TFG",
@@ -40,6 +47,26 @@
       if (tfg) return tfg.toUpperCase();
     }
     return "U";
+  }
+
+  function makeDisplayName(title, path) {
+    const folders = path.replace(/\/FM\.dat$/i, "").split("/");
+    const teamParts = folders[0].split("_");
+    const participant = teamParts.shift() || "???";
+    const organization = teamParts.shift() || "Unknown";
+    const solver = teamParts.join("_") || "Unknown solver";
+    const dataset = folders[folders.length - 1];
+    const datasetParts = dataset.split("_");
+    const datasetTc1Index = datasetParts.findIndex((part) => part.toUpperCase() === "TC1");
+    const titleParts = title.split("_");
+    const titleTc1Index = titleParts.findIndex((part) => part.toUpperCase() === "TC1");
+    const resultParts = datasetTc1Index >= 0 ? datasetParts : titleParts;
+    const tc1Index = datasetTc1Index >= 0 ? datasetTc1Index : titleTc1Index;
+    const resultNumber = tc1Index >= 0
+      ? resultParts.slice(tc1Index + 1).find((part) => /^\d+$/.test(part))
+      : null;
+    const readableSolver = solver.replace(/^USM3D$/i, "USM3d");
+    return `(${participant}) ${organization}, ${readableSolver}: Result ${Number(resultNumber) || "?"}`;
   }
 
   function parseFmFile(text, path) {
@@ -81,6 +108,7 @@
         submission: path.replace(/\/FM\.dat$/, ""),
         title,
         tfg: findTfg(title, path),
+        displayName: makeDisplayName(title, path),
         zone: item.name || `Zone ${index + 1}`,
         rows: item.rows,
       }));
@@ -108,21 +136,19 @@
     return results.flat().sort((a, b) => a.submission.localeCompare(b.submission) || a.zone.localeCompare(b.zone));
   }
 
-  function matchingSubmissions(tfgFilter) {
+  function matchingSeries(tfgFilter) {
     const query = search.value.trim().toLowerCase();
     return state.series
       .filter((item) => !tfgFilter || item.tfg === tfgFilter)
       .filter((item) => !tfgFilter ? state.tfgSelected.has(item.tfg) : true)
-      .filter((item) => item.submission.toLowerCase().includes(query))
-      .map((item) => item.submission)
-      .filter((value, index, values) => values.indexOf(value) === index);
+      .filter((item) => `${item.displayName} ${item.zone}`.toLowerCase().includes(query));
   }
 
   function renderSubmissionList() {
     submissionList.replaceChildren();
     ["R", "S", "H", "A", "U"].forEach((tfg) => {
-      const submissions = matchingSubmissions(tfg);
-      if (!submissions.length && tfg !== "U") return;
+      const series = matchingSeries(tfg);
+      if (!series.length && tfg !== "U") return;
 
       const fieldset = document.createElement("fieldset");
       fieldset.className = "results-dashboard__tfg";
@@ -136,7 +162,7 @@
         renderSubmissionList();
         renderChart();
       });
-      legend.append(tfgToggle, ` ${tfg === "U" ? "Unclassified" : `TFG ${tfg}`}`);
+      legend.append(tfgToggle, ` ${tfgLabels[tfg]}`);
       fieldset.append(legend);
 
       const description = document.createElement("span");
@@ -146,19 +172,19 @@
 
       const submissionsContainer = document.createElement("div");
       submissionsContainer.className = "results-dashboard__tfg-submissions";
-      submissions.forEach((submission) => {
+      series.forEach((item) => {
         const label = document.createElement("label");
         label.className = "results-dashboard__submission";
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.checked = state.selected.has(submission);
-        checkbox.dataset.submission = submission;
+        checkbox.checked = state.selected.has(item.id);
+        checkbox.dataset.series = item.id;
         checkbox.addEventListener("change", () => {
-          if (checkbox.checked) state.selected.add(submission);
-          else state.selected.delete(submission);
+          if (checkbox.checked) state.selected.add(item.id);
+          else state.selected.delete(item.id);
           renderChart();
         });
-        label.append(checkbox, ` ${submission}`);
+        label.append(checkbox, ` ${item.displayName} — ${item.zone}`);
         submissionsContainer.append(label);
       });
       fieldset.append(submissionsContainer);
@@ -168,7 +194,7 @@
 
   function renderChart() {
     const visible = state.series.filter(
-      (item) => state.selected.has(item.submission) && state.tfgSelected.has(item.tfg),
+      (item) => state.selected.has(item.id) && state.tfgSelected.has(item.tfg),
     );
     const palette = [
       "#2563eb",
@@ -197,11 +223,11 @@
         traces.push({
           x: rows.map((row) => row.alpha),
           y: rows.map((row) => row[metric]),
-          name: `${item.submission} — ${item.zone}`,
+          name: `${item.displayName} — ${item.zone}`,
           legendgroup: item.id,
           legendgrouptitle: { text: item.zone },
           customdata: rows.map(() => [item.zone]),
-          hovertemplate: `<b>${label}</b><br>α: %{x}°<br>${metric}: %{y}<extra>${item.submission}<br>${item.zone}</extra>`,
+          hovertemplate: `<b>${label}</b><br>α: %{x}°<br>${metric}: %{y}<extra>${item.displayName}<br>${item.zone}</extra>`,
           mode: "lines+markers",
           line: { color: colors.get(item.id), dash: "solid", width: 1.5 },
           marker: { color: colors.get(item.id), size: 5 },
@@ -245,14 +271,14 @@
       ],
     };
     Plotly.react(chart, traces, layout, { responsive: true, displaylogo: false });
-    setStatus(`${state.selected.size} submissions selected; ${visible.length} grid zones plotted.`);
+    setStatus(`${visible.length} grid zones plotted.`);
   }
 
   async function init() {
     try {
       setStatus("Loading current FM.dat files from GitHub…");
       state.series = await loadSeries();
-      state.series.forEach((item) => state.selected.add(item.submission));
+      state.series.forEach((item) => state.selected.add(item.id));
       renderSubmissionList();
       renderChart();
     } catch (error) {
@@ -263,12 +289,12 @@
 
   search.addEventListener("input", renderSubmissionList);
   selectAll.addEventListener("click", () => {
-    matchingSubmissions().forEach((submission) => state.selected.add(submission));
+    matchingSeries().forEach((item) => state.selected.add(item.id));
     renderSubmissionList();
     renderChart();
   });
   clearAll.addEventListener("click", () => {
-    matchingSubmissions().forEach((submission) => state.selected.delete(submission));
+    matchingSeries().forEach((item) => state.selected.delete(item.id));
     renderSubmissionList();
     renderChart();
   });
