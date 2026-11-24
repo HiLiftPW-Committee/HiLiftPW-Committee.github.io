@@ -4,6 +4,50 @@
   margin: 1.5rem 0 3rem;
 }
 
+.results-dashboard--shell {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 1180px;
+}
+
+.results-dashboard__sidebar {
+  align-self: start;
+  position: sticky;
+  top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-right: 1px solid var(--dashboard-border);
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.results-dashboard__sidebar-title {
+  color: var(--dashboard-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+}
+
+.results-dashboard__view {
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+
+.results-dashboard__view.is-active {
+  border-left-color: var(--global-theme-color, #0076b2);
+  background: color-mix(in srgb, var(--global-theme-color, #0076b2) 10%, transparent);
+  color: var(--global-theme-color, #0076b2);
+  font-weight: 700;
+}
+
+.results-dashboard__main {
+  min-width: 0;
+}
+
 .results-dashboard__intro {
   color: var(--dashboard-muted);
   margin-bottom: 1.5rem;
@@ -35,6 +79,15 @@
 
 .results-dashboard input[type="search"] {
   min-width: min(24rem, 100%);
+  border: 1px solid var(--dashboard-border);
+  border-radius: 0.35rem;
+  padding: 0.45rem 0.6rem;
+  background: transparent;
+  color: inherit;
+}
+
+.results-dashboard select {
+  max-width: 100%;
   border: 1px solid var(--dashboard-border);
   border-radius: 0.35rem;
   padding: 0.45rem 0.6rem;
@@ -115,6 +168,10 @@
   margin-top: 1rem;
 }
 
+.results-dashboard__pressure-chart {
+  min-height: 44rem;
+}
+
 .results-dashboard__notes {
   color: var(--dashboard-muted);
   font-size: 0.85rem;
@@ -122,6 +179,27 @@
 }
 
 @media (max-width: 600px) {
+  .results-dashboard--shell {
+    display: block;
+  }
+
+  .results-dashboard__sidebar {
+    position: static;
+    border-right: 0;
+    border-bottom: 1px solid var(--dashboard-border);
+    margin-bottom: 1rem;
+    padding: 0 0 0.75rem;
+  }
+
+  .results-dashboard__view {
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+  }
+
+  .results-dashboard__view.is-active {
+    border-bottom-color: var(--global-theme-color, #0076b2);
+  }
+
   .results-dashboard__tfg-submissions {
     grid-template-columns: 1fr;
   }

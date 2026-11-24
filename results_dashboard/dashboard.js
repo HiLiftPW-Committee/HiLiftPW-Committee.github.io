@@ -15,7 +15,27 @@
   const chart = dashboard.querySelector("[data-dashboard-chart]");
   const selectAll = dashboard.querySelector("[data-select-all]");
   const clearAll = dashboard.querySelector("[data-clear-all]");
-  const state = { series: [], selected: new Set(), tfgSelected: new Set(["R", "S", "H", "A"]) };
+  const pressureSearch = dashboard.querySelector("[data-pressure-search]");
+  const pressureSubmissionList = dashboard.querySelector("[data-pressure-submission-list]");
+  const pressureStatus = dashboard.querySelector("[data-pressure-status]");
+  const pressureChart = dashboard.querySelector("[data-pressure-chart]");
+  const pressureSelectAll = dashboard.querySelector("[data-pressure-select-all]");
+  const pressureClearAll = dashboard.querySelector("[data-pressure-clear-all]");
+  const pressureMetric = dashboard.querySelector("[data-pressure-metric]");
+  const pressureBelt = dashboard.querySelector("[data-pressure-belt]");
+  const pressureAoA = dashboard.querySelector("[data-pressure-aoa]");
+  const state = {
+    series: [],
+    selected: new Set(),
+    pressureSeries: [],
+    pressureSelected: new Set(),
+    pressureLoaded: false,
+    pressureMetric: "CP",
+    pressureBelt: "all",
+    pressureAoA: "all",
+    repositoryTree: null,
+    tfgSelected: new Set(["R", "S", "H", "A"]),
+  };
   const tfgLabels = {
     R: "RANS TFG",
     S: "Scale Resolving TFG",
@@ -29,10 +49,22 @@
     H: "High Order TFG",
     A: "Artificial Intelligence (AI) TFG",
   };
+  const beltInfo = {
+    S: "Slat chordwise row",
+    W: "Wing chordwise row",
+    F: "Flap chordwise row",
+    WS: "Wing spanwise row",
+    FS: "Flap spanwise row",
+  };
 
   function setStatus(message, stateName) {
     status.textContent = message;
     status.dataset.state = stateName || "info";
+  }
+
+  function setPressureStatus(message, stateName) {
+    pressureStatus.textContent = message;
+    pressureStatus.dataset.state = stateName || "info";
   }
 
   function parseQuotedValues(line) {
@@ -50,7 +82,7 @@
   }
 
   function makeDisplayName(title, path) {
-    const folders = path.replace(/\/FM\.dat$/i, "").split("/");
+    const folders = path.replace(/\/[^/]+$/i, "").split("/");
     const teamParts = folders[0].split("_");
     const participant = teamParts.shift() || "???";
     const organization = teamParts.shift() || "Unknown";
@@ -125,8 +157,15 @@
     return response.json();
   }
 
+  async function loadRepositoryTree() {
+    if (!state.repositoryTree) {
+      state.repositoryTree = await fetchJson(`${repository}/git/trees/main?recursive=1`);
+    }
+    return state.repositoryTree;
+  }
+
   async function loadSeries() {
-    const tree = await fetchJson(`${repository}/git/trees/main?recursive=1`);
+    const tree = await loadRepositoryTree();
     const files = tree.tree
       .filter((entry) => entry.type === "blob" && /(^|\/)FM\.dat$/i.test(entry.path))
       .map((entry) => entry.path);
@@ -139,6 +178,77 @@
       }),
     );
     return results.flat().sort((a, b) => a.submission.localeCompare(b.submission) || a.zone.localeCompare(b.zone));
+  }
+
+  function parseCpcfFile(text, path) {
+    const lines = text.split(/\r?\n/);
+    const titleLine = lines.find((line) => /^\s*TITLE\s*=/.test(line));
+    const variableLine = lines.find((line) => /^\s*VARIABLES\s*=/.test(line));
+    const title = titleLine ? (parseQuotedValues(titleLine)[0] || path).trim() : path;
+    const variables = variableLine ? parseQuotedValues(variableLine) : [];
+    const column = Object.fromEntries(variables.map((name, index) => [name, index]));
+    const zones = [];
+    let zone = null;
+
+    lines.forEach((line) => {
+      const zoneMatch = line.match(/^\s*ZONE\s+T\s*=\s*"([^"]*)"/i);
+      if (zoneMatch) {
+        const name = zoneMatch[1].trim();
+        const rowMatch = name.match(/\bRow\s+([A-Za-z0-9]+)/i);
+        const aoaMatch = name.match(/=\s*([0-9]+(?:\.[0-9]+)?)/);
+        zone = {
+          name,
+          belt: rowMatch ? rowMatch[1].toUpperCase() : "Unknown belt",
+          aoa: aoaMatch ? Number(aoaMatch[1]) : null,
+          rows: [],
+        };
+        zones.push(zone);
+        return;
+      }
+
+      if (!zone || /^\s*(#|$|DATASETAUXDATA)/.test(line)) return;
+      const values = line.trim().split(/\s+/).map(Number);
+      if (values.length < variables.length || values.some(Number.isNaN)) return;
+      const value = (name) => {
+        const number = values[column[name]];
+        return Number.isFinite(number) && number !== -999 ? number : null;
+      };
+      const row = { x: value("X"), CP: value("CP"), CF: value("CF") };
+      if (row.x !== null && (row.CP !== null || row.CF !== null)) zone.rows.push(row);
+    });
+
+    return zones
+      .filter((item) => item.rows.length)
+      .map((item, index) => ({
+        id: `${path}#${index}`,
+        fileId: path,
+        submission: path.replace(/\/[^/]+$/i, ""),
+        title,
+        tfg: findTfg(title, path),
+        displayName: makeDisplayName(title, path),
+        gridName: path.split("/").pop().replace(/_cpcf\.dat$/i, ""),
+        belt: item.belt,
+        aoa: item.aoa,
+        zone: cleanZoneName(item.name),
+        rows: item.rows,
+      }));
+  }
+
+  async function loadPressureSeries() {
+    const tree = await loadRepositoryTree();
+    const files = tree.tree
+      .filter((entry) => entry.type === "blob" && /cpcf\.dat$/i.test(entry.path))
+      .map((entry) => entry.path);
+    const results = await Promise.all(
+      files.map(async (path) => {
+        const response = await fetch(`${rawBase}${path}`);
+        if (!response.ok) throw new Error(`${path}: ${response.status}`);
+        return parseCpcfFile(await response.text(), path);
+      }),
+    );
+    return results.flat().sort((a, b) =>
+      a.submission.localeCompare(b.submission) || a.belt.localeCompare(b.belt) || a.aoa - b.aoa,
+    );
   }
 
   function matchingSeries(tfgFilter) {
@@ -197,6 +307,139 @@
       fieldset.append(submissionsContainer);
       submissionList.append(fieldset);
     });
+  }
+
+  function matchingPressureFiles(tfgFilter) {
+    const query = pressureSearch.value.trim().toLowerCase();
+    const files = state.pressureSeries
+      .filter((item) => !tfgFilter || item.tfg === tfgFilter)
+      .filter((item) => !tfgFilter ? state.tfgSelected.has(item.tfg) : true)
+      .filter((item) => `${item.displayName} ${item.gridName}`.toLowerCase().includes(query))
+      .filter((item, index, values) => values.findIndex((candidate) => candidate.fileId === item.fileId) === index);
+    return files;
+  }
+
+  function beltDescription(belt) {
+    const family = belt.startsWith("WS") ? "WS" : belt.startsWith("FS") ? "FS" : belt.charAt(0);
+    return beltInfo[family] ? `${belt} — ${beltInfo[family]}` : belt;
+  }
+
+  function populatePressureOptions() {
+    const belts = [...new Set(state.pressureSeries.map((item) => item.belt))].sort();
+    const aoas = [...new Set(state.pressureSeries.map((item) => item.aoa).filter((value) => value !== null))].sort(
+      (a, b) => a - b,
+    );
+    pressureBelt.replaceChildren(new Option("All pressure belts", "all"));
+    belts.forEach((belt) => pressureBelt.add(new Option(beltDescription(belt), belt)));
+    pressureBelt.value = belts.includes(state.pressureBelt) ? state.pressureBelt : "all";
+    pressureAoA.replaceChildren(new Option("All angles of attack", "all"));
+    aoas.forEach((aoa) => pressureAoA.add(new Option(`${aoa}°`, String(aoa))));
+    pressureAoA.value = aoas.map(String).includes(String(state.pressureAoA))
+      ? String(state.pressureAoA)
+      : "all";
+    state.pressureBelt = pressureBelt.value;
+    state.pressureAoA = pressureAoA.value;
+  }
+
+  function renderPressureSubmissionList() {
+    pressureSubmissionList.replaceChildren();
+    ["R", "S", "H", "A", "U"].forEach((tfg) => {
+      const files = matchingPressureFiles(tfg);
+      if (!files.length) return;
+      const fieldset = document.createElement("fieldset");
+      fieldset.className = "results-dashboard__tfg";
+      const legend = document.createElement("legend");
+      const tfgToggle = document.createElement("input");
+      tfgToggle.type = "checkbox";
+      tfgToggle.checked = state.tfgSelected.has(tfg);
+      tfgToggle.addEventListener("change", () => {
+        if (tfgToggle.checked) state.tfgSelected.add(tfg);
+        else state.tfgSelected.delete(tfg);
+        renderSubmissionList();
+        renderPressureSubmissionList();
+        renderChart();
+        renderPressureChart();
+      });
+      legend.append(tfgToggle, ` ${tfgLabels[tfg]}`);
+      fieldset.append(legend);
+      const description = document.createElement("span");
+      description.className = "results-dashboard__tfg-description";
+      description.textContent = tfgInfo[tfg] || "Could not identify a TFG from the submission name.";
+      fieldset.append(description);
+
+      const submissionsContainer = document.createElement("div");
+      submissionsContainer.className = "results-dashboard__tfg-submissions";
+      files.forEach((item) => {
+        const label = document.createElement("label");
+        label.className = "results-dashboard__submission";
+        const labelText = `${item.displayName} — ${item.gridName}`;
+        label.title = labelText;
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = state.pressureSelected.has(item.fileId);
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) state.pressureSelected.add(item.fileId);
+          else state.pressureSelected.delete(item.fileId);
+          renderPressureChart();
+        });
+        label.append(checkbox, ` ${labelText}`);
+        submissionsContainer.append(label);
+      });
+      fieldset.append(submissionsContainer);
+      pressureSubmissionList.append(fieldset);
+    });
+  }
+
+  function renderPressureChart() {
+    const visible = state.pressureSeries.filter(
+      (item) =>
+        state.pressureSelected.has(item.fileId) &&
+        state.tfgSelected.has(item.tfg) &&
+        (state.pressureBelt === "all" || item.belt === state.pressureBelt) &&
+        (state.pressureAoA === "all" || String(item.aoa) === String(state.pressureAoA)),
+    );
+    const palette = ["#2563eb", "#dc2626", "#059669", "#9333ea", "#ea580c", "#0891b2", "#be123c", "#4f46e5"];
+    const colors = new Map(
+      [...new Set(state.pressureSeries.map((item) => item.fileId))].map((fileId, index) => [
+        fileId,
+        palette[index % palette.length],
+      ]),
+    );
+    const traces = visible.map((item) => {
+      const rows = item.rows
+        .filter((row) => row[state.pressureMetric] !== null)
+        .sort((a, b) => a.x - b.x);
+      return {
+        x: rows.map((row) => row.x),
+        y: rows.map((row) => row[state.pressureMetric]),
+        name: `${item.displayName} — ${item.gridName} — ${item.belt} @ ${item.aoa ?? "?"}°`,
+        legendgroup: item.id,
+        hovertemplate: `<b>${state.pressureMetric}</b><br>X: %{x}<br>${state.pressureMetric}: %{y}<extra>${item.displayName}<br>${item.zone}</extra>`,
+        mode: "lines",
+        line: { color: colors.get(item.fileId), width: 1.5 },
+        showlegend: true,
+      };
+    });
+    const dark = document.documentElement.dataset.theme === "dark";
+    const color = dark ? "#e5e7eb" : "#374151";
+    const grid = dark ? "#374151" : "#e5e7eb";
+    Plotly.react(
+      pressureChart,
+      traces,
+      {
+        height: 700,
+        margin: { l: 70, r: 25, t: 25, b: 65 },
+        paper_bgcolor: "transparent",
+        plot_bgcolor: "transparent",
+        font: { color },
+        hovermode: "x unified",
+        legend: { orientation: "h", y: -0.18 },
+        xaxis: { title: "X coordinate", gridcolor: grid, color, automargin: true },
+        yaxis: { title: state.pressureMetric, gridcolor: grid, zerolinecolor: grid, color, automargin: true },
+      },
+      { responsive: true, displaylogo: false },
+    );
+    setPressureStatus(`${visible.length} CPCF traces plotted.`);
   }
 
   function renderChart() {
@@ -306,5 +549,64 @@
     renderChart();
   });
 
+  function setView(view) {
+    dashboard.querySelectorAll("[data-dashboard-panel]").forEach((panel) => {
+      panel.hidden = panel.dataset.dashboardPanel !== view;
+    });
+    dashboard.querySelectorAll("[data-dashboard-view]").forEach((button) => {
+      const active = button.dataset.dashboardView === view;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-current", active ? "page" : "false");
+    });
+  }
+
+  async function loadPressureView() {
+    setView("pressure");
+    if (state.pressureLoaded) return;
+    try {
+      setPressureStatus("Loading current CPCF files from GitHub…");
+      state.pressureSeries = await loadPressureSeries();
+      state.pressureSeries.forEach((item) => state.pressureSelected.add(item.fileId));
+      state.pressureLoaded = true;
+      populatePressureOptions();
+      renderPressureSubmissionList();
+      renderPressureChart();
+    } catch (error) {
+      console.error(error);
+      setPressureStatus(`Unable to load CPCF results: ${error.message}`, "error");
+    }
+  }
+
+  dashboard.querySelectorAll("[data-dashboard-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.dashboardView === "pressure") loadPressureView();
+      else setView("forces");
+    });
+  });
+  pressureSearch.addEventListener("input", renderPressureSubmissionList);
+  pressureSelectAll.addEventListener("click", () => {
+    matchingPressureFiles().forEach((item) => state.pressureSelected.add(item.fileId));
+    renderPressureSubmissionList();
+    renderPressureChart();
+  });
+  pressureClearAll.addEventListener("click", () => {
+    matchingPressureFiles().forEach((item) => state.pressureSelected.delete(item.fileId));
+    renderPressureSubmissionList();
+    renderPressureChart();
+  });
+  pressureMetric.addEventListener("change", () => {
+    state.pressureMetric = pressureMetric.value;
+    renderPressureChart();
+  });
+  pressureBelt.addEventListener("change", () => {
+    state.pressureBelt = pressureBelt.value;
+    renderPressureChart();
+  });
+  pressureAoA.addEventListener("change", () => {
+    state.pressureAoA = pressureAoA.value;
+    renderPressureChart();
+  });
+
+  setView("forces");
   init();
 })();
