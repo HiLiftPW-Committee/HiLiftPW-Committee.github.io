@@ -415,8 +415,8 @@
         name: `${item.displayName} — ${item.gridName} — ${item.belt} @ ${item.aoa ?? "?"}°`,
         legendgroup: item.id,
         hovertemplate: `<b>${state.pressureMetric}</b><br>X: %{x}<br>${state.pressureMetric}: %{y}<extra>${item.displayName}<br>${item.zone}</extra>`,
-        mode: "lines",
-        line: { color: colors.get(item.fileId), width: 1.5 },
+        mode: "markers",
+        marker: { color: colors.get(item.fileId), size: 4 },
         showlegend: true,
       };
     });
