@@ -455,7 +455,14 @@
         hovermode: "x unified",
         legend: { orientation: "h", y: -0.18 },
         xaxis: { title: "X coordinate", gridcolor: grid, color, automargin: true },
-        yaxis: { title: state.pressureMetric, gridcolor: grid, zerolinecolor: grid, color, automargin: true },
+        yaxis: {
+          title: state.pressureMetric,
+          autorange: state.pressureMetric === "CP" ? "reversed" : true,
+          gridcolor: grid,
+          zerolinecolor: grid,
+          color,
+          automargin: true,
+        },
       },
       { responsive: true, displaylogo: false },
     );
