@@ -34,7 +34,6 @@
     pressureBelt: "all",
     pressureAoA: "all",
     repositoryTree: null,
-    tfgSelected: new Set(["R", "S", "H", "A"]),
   };
   const tfgLabels = {
     R: "RANS TFG",
@@ -255,7 +254,6 @@
     const query = search.value.trim().toLowerCase();
     return state.series
       .filter((item) => !tfgFilter || item.tfg === tfgFilter)
-      .filter((item) => !tfgFilter ? state.tfgSelected.has(item.tfg) : true)
       .filter((item) => `${item.displayName} ${item.zone}`.toLowerCase().includes(query));
   }
 
@@ -268,16 +266,7 @@
       const fieldset = document.createElement("fieldset");
       fieldset.className = "results-dashboard__tfg";
       const legend = document.createElement("legend");
-      const tfgToggle = document.createElement("input");
-      tfgToggle.type = "checkbox";
-      tfgToggle.checked = state.tfgSelected.has(tfg);
-      tfgToggle.addEventListener("change", () => {
-        if (tfgToggle.checked) state.tfgSelected.add(tfg);
-        else state.tfgSelected.delete(tfg);
-        renderSubmissionList();
-        renderChart();
-      });
-      legend.append(tfgToggle, ` ${tfgLabels[tfg]}`);
+      legend.textContent = tfgLabels[tfg];
       fieldset.append(legend);
 
       const description = document.createElement("span");
@@ -313,7 +302,6 @@
     const query = pressureSearch.value.trim().toLowerCase();
     const files = state.pressureSeries
       .filter((item) => !tfgFilter || item.tfg === tfgFilter)
-      .filter((item) => !tfgFilter ? state.tfgSelected.has(item.tfg) : true)
       .filter((item) => `${item.displayName} ${item.gridName}`.toLowerCase().includes(query))
       .filter((item, index, values) => values.findIndex((candidate) => candidate.fileId === item.fileId) === index);
     return files;
@@ -340,7 +328,7 @@
 
   function populatePressureOptions() {
     const selectedSeries = state.pressureSeries.filter(
-      (item) => state.pressureSelected.has(item.fileId) && state.tfgSelected.has(item.tfg),
+      (item) => state.pressureSelected.has(item.fileId),
     );
     const belts = [...new Set(selectedSeries.map((item) => beltGroupKey(item.belt)))].sort();
     const aoaSeries = selectedSeries.filter((item) => beltMatchesSelection(item.belt, state.pressureBelt));
@@ -367,19 +355,7 @@
       const fieldset = document.createElement("fieldset");
       fieldset.className = "results-dashboard__tfg";
       const legend = document.createElement("legend");
-      const tfgToggle = document.createElement("input");
-      tfgToggle.type = "checkbox";
-      tfgToggle.checked = state.tfgSelected.has(tfg);
-      tfgToggle.addEventListener("change", () => {
-        if (tfgToggle.checked) state.tfgSelected.add(tfg);
-        else state.tfgSelected.delete(tfg);
-        renderSubmissionList();
-        renderPressureSubmissionList();
-        populatePressureOptions();
-        renderChart();
-        renderPressureChart();
-      });
-      legend.append(tfgToggle, ` ${tfgLabels[tfg]}`);
+      legend.textContent = tfgLabels[tfg];
       fieldset.append(legend);
       const description = document.createElement("span");
       description.className = "results-dashboard__tfg-description";
@@ -414,7 +390,6 @@
     const visible = state.pressureSeries.filter(
       (item) =>
         state.pressureSelected.has(item.fileId) &&
-        state.tfgSelected.has(item.tfg) &&
         beltMatchesSelection(item.belt, state.pressureBelt) &&
         (state.pressureAoA === "all" || String(item.aoa) === String(state.pressureAoA)),
     );
@@ -471,7 +446,7 @@
 
   function renderChart() {
     const visible = state.series.filter(
-      (item) => state.selected.has(item.id) && state.tfgSelected.has(item.tfg),
+      (item) => state.selected.has(item.id),
     );
     const palette = [
       "#2563eb",
@@ -555,7 +530,6 @@
     try {
       setStatus("Loading current FM.dat files from GitHub…");
       state.series = await loadSeries();
-      state.series.forEach((item) => state.selected.add(item.id));
       renderSubmissionList();
       renderChart();
     } catch (error) {
@@ -593,7 +567,6 @@
     try {
       setPressureStatus("Loading current CPCF files from GitHub…");
       state.pressureSeries = await loadPressureSeries();
-      state.pressureSeries.forEach((item) => state.pressureSelected.add(item.fileId));
       state.pressureLoaded = true;
       populatePressureOptions();
       renderPressureSubmissionList();

@@ -87,4 +87,4 @@ sitemap: false
   </main>
 </div>
 
-<script src="../results_dashboard/dashboard.js?v=6" defer></script>
+<script src="../results_dashboard/dashboard.js?v=7" defer></script>
