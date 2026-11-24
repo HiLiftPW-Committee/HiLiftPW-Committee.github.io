@@ -324,13 +324,31 @@
     return beltInfo[family] ? `${belt} — ${beltInfo[family]}` : belt;
   }
 
+  function beltGroupKey(belt) {
+    return /^[SWF][A-G]$/.test(belt) ? `chord:${belt.charAt(1)}` : belt;
+  }
+
+  function beltMatchesSelection(belt, selection) {
+    if (selection === "all") return true;
+    if (selection.startsWith("chord:")) return ["S", "W", "F"].includes(belt.charAt(0)) && belt.charAt(1) === selection.charAt(6) && belt.length === 2;
+    return belt === selection;
+  }
+
+  function beltGroupDescription(group) {
+    return group.startsWith("chord:") ? `Chordwise Row ${group.charAt(6)}` : beltDescription(group);
+  }
+
   function populatePressureOptions() {
-    const belts = [...new Set(state.pressureSeries.map((item) => item.belt))].sort();
-    const aoas = [...new Set(state.pressureSeries.map((item) => item.aoa).filter((value) => value !== null))].sort(
+    const selectedSeries = state.pressureSeries.filter(
+      (item) => state.pressureSelected.has(item.fileId) && state.tfgSelected.has(item.tfg),
+    );
+    const belts = [...new Set(selectedSeries.map((item) => beltGroupKey(item.belt)))].sort();
+    const aoaSeries = selectedSeries.filter((item) => beltMatchesSelection(item.belt, state.pressureBelt));
+    const aoas = [...new Set(aoaSeries.map((item) => item.aoa).filter((value) => value !== null))].sort(
       (a, b) => a - b,
     );
     pressureBelt.replaceChildren(new Option("All pressure belts", "all"));
-    belts.forEach((belt) => pressureBelt.add(new Option(beltDescription(belt), belt)));
+    belts.forEach((belt) => pressureBelt.add(new Option(beltGroupDescription(belt), belt)));
     pressureBelt.value = belts.includes(state.pressureBelt) ? state.pressureBelt : "all";
     pressureAoA.replaceChildren(new Option("All angles of attack", "all"));
     aoas.forEach((aoa) => pressureAoA.add(new Option(`${aoa}°`, String(aoa))));
@@ -357,6 +375,7 @@
         else state.tfgSelected.delete(tfg);
         renderSubmissionList();
         renderPressureSubmissionList();
+        populatePressureOptions();
         renderChart();
         renderPressureChart();
       });
@@ -380,6 +399,7 @@
         checkbox.addEventListener("change", () => {
           if (checkbox.checked) state.pressureSelected.add(item.fileId);
           else state.pressureSelected.delete(item.fileId);
+          populatePressureOptions();
           renderPressureChart();
         });
         label.append(checkbox, ` ${labelText}`);
@@ -395,7 +415,7 @@
       (item) =>
         state.pressureSelected.has(item.fileId) &&
         state.tfgSelected.has(item.tfg) &&
-        (state.pressureBelt === "all" || item.belt === state.pressureBelt) &&
+        beltMatchesSelection(item.belt, state.pressureBelt) &&
         (state.pressureAoA === "all" || String(item.aoa) === String(state.pressureAoA)),
     );
     const palette = ["#2563eb", "#dc2626", "#059669", "#9333ea", "#ea580c", "#0891b2", "#be123c", "#4f46e5"];
@@ -586,11 +606,13 @@
   pressureSearch.addEventListener("input", renderPressureSubmissionList);
   pressureSelectAll.addEventListener("click", () => {
     matchingPressureFiles().forEach((item) => state.pressureSelected.add(item.fileId));
+    populatePressureOptions();
     renderPressureSubmissionList();
     renderPressureChart();
   });
   pressureClearAll.addEventListener("click", () => {
     matchingPressureFiles().forEach((item) => state.pressureSelected.delete(item.fileId));
+    populatePressureOptions();
     renderPressureSubmissionList();
     renderPressureChart();
   });
@@ -600,6 +622,7 @@
   });
   pressureBelt.addEventListener("change", () => {
     state.pressureBelt = pressureBelt.value;
+    populatePressureOptions();
     renderPressureChart();
   });
   pressureAoA.addEventListener("change", () => {
