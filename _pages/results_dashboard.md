@@ -13,7 +13,8 @@ sitemap: false
   <p class="results-dashboard__intro">
     Proof of concept: total whole-body aerodynamic coefficients from the current
     <a href="https://github.com/High-Lift-Prediction-Workshop/HLPW6-TC1">HLPW6 Test Case 1 submissions</a>.
-    Every reported grid zone is exposed as its own series.
+    Every reported grid zone is exposed as its own series. Submissions are
+    grouped by Technical Focus Group (TFG).
   </p>
 
   <div class="results-dashboard__controls">

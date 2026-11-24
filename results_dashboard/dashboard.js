@@ -15,7 +15,13 @@
   const chart = dashboard.querySelector("[data-dashboard-chart]");
   const selectAll = dashboard.querySelector("[data-select-all]");
   const clearAll = dashboard.querySelector("[data-clear-all]");
-  const state = { series: [], selected: new Set() };
+  const state = { series: [], selected: new Set(), tfgSelected: new Set(["R", "S", "H", "A"]) };
+  const tfgInfo = {
+    R: "Reynolds-Averaged Navier–Stokes (RANS) and grid-adaptive TFG",
+    S: "Scale-Resolving Simulation (SRS) TFG",
+    H: "High Order TFG",
+    A: "Artificial Intelligence (AI) TFG",
+  };
 
   function setStatus(message, stateName) {
     status.textContent = message;
@@ -24,6 +30,16 @@
 
   function parseQuotedValues(line) {
     return Array.from(line.matchAll(/"([^"]*)"/g), (match) => match[1]);
+  }
+
+  function findTfg(title, path) {
+    const tokens = `${title} ${path}`.split(/[^A-Za-z0-9]+/);
+    const tc1Index = tokens.findIndex((token) => token.toUpperCase() === "TC1");
+    if (tc1Index >= 0) {
+      const tfg = tokens.slice(tc1Index + 1, tc1Index + 5).find((token) => /^[RSHA]$/i.test(token));
+      if (tfg) return tfg.toUpperCase();
+    }
+    return "U";
   }
 
   function parseFmFile(text, path) {
@@ -64,6 +80,7 @@
         id: `${path}#${index}`,
         submission: path.replace(/\/FM\.dat$/, ""),
         title,
+        tfg: findTfg(title, path),
         zone: item.name || `Zone ${index + 1}`,
         rows: item.rows,
       }));
@@ -91,36 +108,68 @@
     return results.flat().sort((a, b) => a.submission.localeCompare(b.submission) || a.zone.localeCompare(b.zone));
   }
 
-  function matchingSubmissions() {
+  function matchingSubmissions(tfgFilter) {
     const query = search.value.trim().toLowerCase();
     return state.series
+      .filter((item) => !tfgFilter || item.tfg === tfgFilter)
+      .filter((item) => !tfgFilter ? state.tfgSelected.has(item.tfg) : true)
+      .filter((item) => item.submission.toLowerCase().includes(query))
       .map((item) => item.submission)
-      .filter((value, index, values) => values.indexOf(value) === index)
-      .filter((value) => value.toLowerCase().includes(query));
+      .filter((value, index, values) => values.indexOf(value) === index);
   }
 
   function renderSubmissionList() {
-    const submissions = matchingSubmissions();
     submissionList.replaceChildren();
-    submissions.forEach((submission) => {
-      const label = document.createElement("label");
-      label.className = "results-dashboard__submission";
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.checked = state.selected.has(submission);
-      checkbox.dataset.submission = submission;
-      checkbox.addEventListener("change", () => {
-        if (checkbox.checked) state.selected.add(submission);
-        else state.selected.delete(submission);
+    ["R", "S", "H", "A", "U"].forEach((tfg) => {
+      const submissions = matchingSubmissions(tfg);
+      if (!submissions.length && tfg !== "U") return;
+
+      const fieldset = document.createElement("fieldset");
+      fieldset.className = "results-dashboard__tfg";
+      const legend = document.createElement("legend");
+      const tfgToggle = document.createElement("input");
+      tfgToggle.type = "checkbox";
+      tfgToggle.checked = state.tfgSelected.has(tfg);
+      tfgToggle.addEventListener("change", () => {
+        if (tfgToggle.checked) state.tfgSelected.add(tfg);
+        else state.tfgSelected.delete(tfg);
+        renderSubmissionList();
         renderChart();
       });
-      label.append(checkbox, ` ${submission}`);
-      submissionList.append(label);
+      legend.append(tfgToggle, ` ${tfg === "U" ? "Unclassified" : `TFG ${tfg}`}`);
+      fieldset.append(legend);
+
+      const description = document.createElement("span");
+      description.className = "results-dashboard__tfg-description";
+      description.textContent = tfgInfo[tfg] || "Could not identify a TFG from the submission name.";
+      fieldset.append(description);
+
+      const submissionsContainer = document.createElement("div");
+      submissionsContainer.className = "results-dashboard__tfg-submissions";
+      submissions.forEach((submission) => {
+        const label = document.createElement("label");
+        label.className = "results-dashboard__submission";
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = state.selected.has(submission);
+        checkbox.dataset.submission = submission;
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) state.selected.add(submission);
+          else state.selected.delete(submission);
+          renderChart();
+        });
+        label.append(checkbox, ` ${submission}`);
+        submissionsContainer.append(label);
+      });
+      fieldset.append(submissionsContainer);
+      submissionList.append(fieldset);
     });
   }
 
   function renderChart() {
-    const visible = state.series.filter((item) => state.selected.has(item.submission));
+    const visible = state.series.filter(
+      (item) => state.selected.has(item.submission) && state.tfgSelected.has(item.tfg),
+    );
     const metrics = [
       ["CL", "Lift coefficient, CL"],
       ["CD", "Drag coefficient, CD"],
@@ -158,18 +207,18 @@
       automargin: true,
     });
     const layout = {
-      height: Math.max(420, Math.min(850, 250 + visible.length * 3)),
+      height: 1260,
       margin: { l: 65, r: 25, t: 25, b: 55 },
       paper_bgcolor: "transparent",
       plot_bgcolor: "transparent",
       font: { color },
       legend: { orientation: "h", y: -0.14 },
       hovermode: "x unified",
-      xaxis: axis("Angle of attack, α (deg)", [0.72, 1]),
+      xaxis: { ...axis("Angle of attack, α (deg)", [0, 1]), anchor: "y" },
       yaxis: axis("CL", [0.72, 1]),
-      xaxis2: axis("Angle of attack, α (deg)", [0.38, 0.66]),
+      xaxis2: { ...axis("Angle of attack, α (deg)", [0, 1]), anchor: "y2" },
       yaxis2: axis("CD", [0.38, 0.66]),
-      xaxis3: axis("Angle of attack, α (deg)", [0.04, 0.32]),
+      xaxis3: { ...axis("Angle of attack, α (deg)", [0, 1]), anchor: "y3" },
       yaxis3: axis("CM", [0.04, 0.32]),
       annotations: [
         { text: "CL", x: 0, xref: "paper", y: 0.86, yref: "paper", showarrow: false, font: { size: 16, color } },
