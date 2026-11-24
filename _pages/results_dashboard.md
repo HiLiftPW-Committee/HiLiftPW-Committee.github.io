@@ -6,7 +6,7 @@ nav: false
 sitemap: false
 ---
 
-<link rel="stylesheet" href="../results_dashboard/dashboard.css">
+<link rel="stylesheet" href="../results_dashboard/dashboard.css?v=3">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
 
 <div class="results-dashboard results-dashboard--shell" data-results-dashboard>
@@ -87,4 +87,4 @@ sitemap: false
   </main>
 </div>
 
-<script src="../results_dashboard/dashboard.js" defer></script>
+<script src="../results_dashboard/dashboard.js?v=3" defer></script>
