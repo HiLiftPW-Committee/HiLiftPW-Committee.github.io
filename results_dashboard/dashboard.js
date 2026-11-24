@@ -170,6 +170,21 @@
     const visible = state.series.filter(
       (item) => state.selected.has(item.submission) && state.tfgSelected.has(item.tfg),
     );
+    const palette = [
+      "#2563eb",
+      "#dc2626",
+      "#059669",
+      "#9333ea",
+      "#ea580c",
+      "#0891b2",
+      "#be123c",
+      "#4f46e5",
+      "#65a30d",
+      "#c026d3",
+    ];
+    const colors = new Map(
+      state.series.map((item, index) => [item.id, palette[index % palette.length]]),
+    );
     const metrics = [
       ["CL", "Lift coefficient, CL"],
       ["CD", "Drag coefficient, CD"],
@@ -188,6 +203,9 @@
           customdata: rows.map(() => [item.zone]),
           hovertemplate: `<b>${label}</b><br>α: %{x}°<br>${metric}: %{y}<extra>${item.submission}<br>${item.zone}</extra>`,
           mode: "lines+markers",
+          line: { color: colors.get(item.id), dash: "solid", width: 1.5 },
+          marker: { color: colors.get(item.id), size: 5 },
+          showlegend: metric === "CL",
           visible: true,
           xaxis: metric === "CL" ? "x" : metric === "CD" ? "x2" : "x3",
           yaxis: metric === "CL" ? "y" : metric === "CD" ? "y2" : "y3",
@@ -212,7 +230,7 @@
       paper_bgcolor: "transparent",
       plot_bgcolor: "transparent",
       font: { color },
-      legend: { orientation: "h", y: -0.14 },
+      legend: { orientation: "h", y: -0.14, groupclick: "togglegroup" },
       hovermode: "x unified",
       xaxis: { ...axis("Angle of attack, α (deg)", [0, 1]), anchor: "y" },
       yaxis: axis("CL", [0.72, 1]),

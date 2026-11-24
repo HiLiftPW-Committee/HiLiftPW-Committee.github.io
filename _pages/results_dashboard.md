@@ -33,7 +33,7 @@ sitemap: false
   <p class="results-dashboard__notes">
     CL, CD, and CM are the submitted nondimensional total coefficients. Missing
     values marked -999 are omitted. Click legend entries to show or hide
-    individual traces.
+    all three coefficient traces for a grid zone.
   </p>
 </div>
 
