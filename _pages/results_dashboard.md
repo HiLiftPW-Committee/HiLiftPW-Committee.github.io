@@ -6,7 +6,7 @@ nav: false
 sitemap: false
 ---
 
-<link rel="stylesheet" href="../results_dashboard/dashboard.css?v=3">
+<link rel="stylesheet" href="../results_dashboard/dashboard.css?v=4">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
 
 <div class="results-dashboard results-dashboard--shell" data-results-dashboard>
@@ -57,16 +57,22 @@ sitemap: false
       </p>
 
       <div class="results-dashboard__controls">
-        <div class="results-dashboard__control-row">
-          <label for="pressure-metric">Coefficient</label>
-          <select id="pressure-metric" data-pressure-metric>
-            <option value="CP">Cp · pressure coefficient</option>
-            <option value="CF">Cf · skin-friction coefficient</option>
-          </select>
-          <label for="pressure-belt">Pressure belt</label>
-          <select id="pressure-belt" data-pressure-belt></select>
-          <label for="pressure-aoa">Angle of attack</label>
-          <select id="pressure-aoa" data-pressure-aoa></select>
+        <div class="results-dashboard__pressure-selectors">
+          <div class="results-dashboard__select-control">
+            <label for="pressure-metric">Coefficient</label>
+            <select id="pressure-metric" data-pressure-metric>
+              <option value="CP">Cp · pressure coefficient</option>
+              <option value="CF">Cf · skin-friction coefficient</option>
+            </select>
+          </div>
+          <div class="results-dashboard__select-control">
+            <label for="pressure-belt">Pressure belt</label>
+            <select id="pressure-belt" data-pressure-belt></select>
+          </div>
+          <div class="results-dashboard__select-control">
+            <label for="pressure-aoa">Angle of attack</label>
+            <select id="pressure-aoa" data-pressure-aoa></select>
+          </div>
         </div>
         <div class="results-dashboard__control-row">
           <label for="pressure-search">Filter CPCF submissions</label>

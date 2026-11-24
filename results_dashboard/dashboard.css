@@ -95,6 +95,23 @@
   color: inherit;
 }
 
+.results-dashboard__pressure-selectors {
+  display: grid;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.results-dashboard__select-control {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.results-dashboard__select-control label {
+  font-weight: 600;
+}
+
 .results-dashboard button {
   border: 1px solid var(--dashboard-border);
   border-radius: 0.35rem;
