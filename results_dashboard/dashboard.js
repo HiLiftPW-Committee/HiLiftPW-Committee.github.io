@@ -40,7 +40,7 @@
   }
 
   function findTfg(title, path) {
-    const tokens = `${title} ${path}`.split(/[^A-Za-z0-9]+/);
+    const tokens = `${path} ${title}`.split(/[^A-Za-z0-9]+/);
     const tc1Index = tokens.findIndex((token) => token.toUpperCase() === "TC1");
     if (tc1Index >= 0) {
       const tfg = tokens.slice(tc1Index + 1, tc1Index + 5).find((token) => /^[RSHA]$/i.test(token));
@@ -66,7 +66,12 @@
       ? resultParts.slice(tc1Index + 1).find((part) => /^\d+$/.test(part))
       : null;
     const readableSolver = solver.replace(/^USM3D$/i, "USM3d");
-    return `(${participant}) ${organization}, ${readableSolver}: Result ${Number(resultNumber) || "?"}`;
+    const resultIndex = resultNumber ? String(Number(resultNumber)).padStart(2, "0") : "??";
+    return `(${participant}) ${organization}, ${readableSolver}: (${resultIndex})`;
+  }
+
+  function cleanZoneName(zone) {
+    return zone.replace(/^\s*\d+\s+TC1\s*,?\s*/i, "").trim();
   }
 
   function parseFmFile(text, path) {
@@ -109,7 +114,7 @@
         title,
         tfg: findTfg(title, path),
         displayName: makeDisplayName(title, path),
-        zone: item.name || `Zone ${index + 1}`,
+        zone: cleanZoneName(item.name || `Zone ${index + 1}`),
         rows: item.rows,
       }));
   }
