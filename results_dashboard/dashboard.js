@@ -180,6 +180,8 @@
       series.forEach((item) => {
         const label = document.createElement("label");
         label.className = "results-dashboard__submission";
+        const labelText = `${item.displayName} — ${item.zone}`;
+        label.title = labelText;
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = state.selected.has(item.id);
@@ -189,7 +191,7 @@
           else state.selected.delete(item.id);
           renderChart();
         });
-        label.append(checkbox, ` ${item.displayName} — ${item.zone}`);
+        label.append(checkbox, ` ${labelText}`);
         submissionsContainer.append(label);
       });
       fieldset.append(submissionsContainer);
